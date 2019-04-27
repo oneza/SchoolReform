@@ -1,5 +1,12 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
+/// @DnDHash : 4E792B6C
+/// @DnDArgument : "expr" "1"
+/// @DnDArgument : "var" "jump"
+jump = 1;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
 /// @DnDHash : 36D3531D
 /// @DnDArgument : "expr" "100"
 /// @DnDArgument : "var" "player_hp"
