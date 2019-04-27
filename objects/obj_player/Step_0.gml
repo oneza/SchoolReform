@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 04CC7E08
-/// @DnDArgument : "code" "key_right = keyboard_check(ord("D"));$(13_10)key_space = keyboard_check_pressed(vk_space);$(13_10)key_left  = keyboard_check(ord("A"));$(13_10)//key_down = (keyboard_check(ord("S")) || keyboard_check(vk_down));$(13_10)spd = 4;$(13_10)$(13_10)//move_x = 0;$(13_10)move_x = (key_right - key_left)*spd;$(13_10)if (place_meeting(x+sign(move_x), y-10, obj_floor))$(13_10)   {$(13_10)	move_x=0;$(13_10)   } $(13_10)x += move_x;$(13_10)if (key_space)&&(jump)$(13_10)	{vspeed=-7;$(13_10)	y-=1;$(13_10)	}$(13_10)$(13_10)if (!place_meeting(x, y-1, obj_floor))$(13_10)   {$(13_10)	jump=0$(13_10)	vspeed += 0.5;$(13_10)   } $(13_10)if (vspeed>0){$(13_10)	if (place_meeting(x, y+1, obj_floor))$(13_10)   {$(13_10)	vspeed=0$(13_10)	//gravity = 0;$(13_10)	jump=1;$(13_10)   }$(13_10)}$(13_10)/*if place_meeting(x,y+3,obj_floor){$(13_10)	repeat(3){$(13_10)		if(!place_meeting(x,y+sign(vspeed),obj_floor)){$(13_10)			y+=sign(vspeed);$(13_10)		}$(13_10)	}$(13_10)	vspeed=0;$(13_10)}$(13_10)$(13_10)$(13_10)$(13_10)/*$(13_10)}$(13_10)else{$(13_10)	while (gravity_value > 0){$(13_10)		if (!place_meeting(x,y+1+gravity_value, obj_floor)){$(13_10)			y += gravity_value$(13_10)			gravity_value = 0$(13_10)		}$(13_10)		gravity_value -= 1$(13_10)	}$(13_10)	vspeed = 0$(13_10)	gravity_value = 0$(13_10)	if (player_hp > 0){$(13_10)	if key_space{$(13_10)		gravity_value = -70$(13_10)	}$(13_10)	}$(13_10)}$(13_10)*/"
+/// @DnDArgument : "code" "key_right = keyboard_check(ord("D"));$(13_10)key_space = keyboard_check_pressed(vk_space);$(13_10)key_left  = keyboard_check(ord("A"));$(13_10)//key_down = (keyboard_check(ord("S")) || keyboard_check(vk_down));$(13_10)spd = 4;$(13_10)$(13_10)//move_x = 0;$(13_10)move_x = (key_right - key_left)*spd;$(13_10)if (place_meeting(x+sign(move_x), y-10, obj_floor))$(13_10)   {$(13_10)	move_x=0;$(13_10)   } $(13_10)x += move_x;$(13_10)if (key_space)&&(jump)$(13_10)	{vspeed=-7;$(13_10)	//y-=1;$(13_10)	}$(13_10)$(13_10)if (!place_meeting(x, y-1, obj_floor))$(13_10)   {$(13_10)	jump=0$(13_10)	vspeed += 0.5;$(13_10)   } $(13_10)if (vspeed>0){$(13_10)	if (place_meeting(x, y+1, obj_floor))$(13_10)   {$(13_10)	vspeed=0$(13_10)	//gravity = 0;$(13_10)	jump=1;$(13_10)   }$(13_10)}$(13_10)/*if place_meeting(x,y+3,obj_floor){$(13_10)	repeat(3){$(13_10)		if(!place_meeting(x,y+sign(vspeed),obj_floor)){$(13_10)			y+=sign(vspeed);$(13_10)		}$(13_10)	}$(13_10)	vspeed=0;$(13_10)}$(13_10)$(13_10)$(13_10)$(13_10)/*$(13_10)}$(13_10)else{$(13_10)	while (gravity_value > 0){$(13_10)		if (!place_meeting(x,y+1+gravity_value, obj_floor)){$(13_10)			y += gravity_value$(13_10)			gravity_value = 0$(13_10)		}$(13_10)		gravity_value -= 1$(13_10)	}$(13_10)	vspeed = 0$(13_10)	gravity_value = 0$(13_10)	if (player_hp > 0){$(13_10)	if key_space{$(13_10)		gravity_value = -70$(13_10)	}$(13_10)	}$(13_10)}$(13_10)*/"
 key_right = keyboard_check(ord("D"));
 key_space = keyboard_check_pressed(vk_space);
 key_left  = keyboard_check(ord("A"));
@@ -17,7 +17,7 @@ if (place_meeting(x+sign(move_x), y-10, obj_floor))
 x += move_x;
 if (key_space)&&(jump)
 	{vspeed=-7;
-	y-=1;
+	//y-=1;
 	}
 
 if (!place_meeting(x, y-1, obj_floor))
