@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_qte_up",
     "eventList": [
-        {
-            "id": "61cf1d59-4fef-4c00-8d9f-99da3a6a198a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": true,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "9dd6ce27-1fdd-4f6c-b224-24a6e772d64a"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
