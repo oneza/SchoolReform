@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "6789dce3-2b0a-44fa-8c9a-ac3959539d1b",
+            "Value": {
+                "id": "ef2a0264-71a1-4a15-b0a5-ad87dc28d335",
+                "resourcePath": "objects\\obj_kosil\\obj_kosil.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "692c3688-79a0-49e9-baf7-de273b8f62ba",
             "Value": {
                 "id": "8e99a26c-e64c-47c6-957a-6a01ae0304bf",
