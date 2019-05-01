@@ -1,19 +1,10 @@
 {
-    "id": "6789dce3-2b0a-44fa-8c9a-ac3959539d1b",
+    "id": "2f37637c-eb7f-4554-a48a-e510230aee2a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_kosil",
+    "name": "obj_school_floor",
     "eventList": [
-        {
-            "id": "07bb25cc-eb10-4256-897a-bfb44a6226b9",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": true,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 13,
-            "eventtype": 9,
-            "m_owner": "6789dce3-2b0a-44fa-8c9a-ac3959539d1b"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -33,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "8deacaab-129f-435e-822b-377a48e7373a",
     "visible": true
 }
