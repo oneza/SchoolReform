@@ -2,7 +2,7 @@
     "id": "6449c59f-126e-49cd-821f-2dc35b315603",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite9",
+    "name": "spr_rmstartbutton",
     "For3D": false,
     "HTile": false,
     "VTile": false,
