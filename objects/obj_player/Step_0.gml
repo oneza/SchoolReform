@@ -183,11 +183,12 @@ if key_space&&jump {
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 57F114B2
-/// @DnDArgument : "code" "if (!place_meeting(x,y,obj_enemy_weak)){$(13_10)	instance_destroy(obj_qte_up,true);$(13_10)	instance_destroy(obj_qte_down,true);$(13_10)}$(13_10)if (move_x!=0){$(13_10)obj_player.image_xscale=sign(move_x);$(13_10)}$(13_10)$(13_10)"
+/// @DnDArgument : "code" "if (!place_meeting(x,y,obj_enemy_weak)){$(13_10)	instance_destroy(obj_qte_up,true);$(13_10)	instance_destroy(obj_qte_down,true);$(13_10)}$(13_10)$(13_10)if (move_x!=0){$(13_10)obj_player.image_xscale=sign(move_x);$(13_10)}$(13_10)$(13_10)"
 if (!place_meeting(x,y,obj_enemy_weak)){
 	instance_destroy(obj_qte_up,true);
 	instance_destroy(obj_qte_down,true);
 }
+
 if (move_x!=0){
 obj_player.image_xscale=sign(move_x);
 }
