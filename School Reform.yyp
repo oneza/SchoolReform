@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "22269ac5-6c88-448e-bca5-ccc93c168621",
+            "Value": {
+                "id": "9facc4a9-5c2a-4df2-99cf-7208a2b3ab61",
+                "resourcePath": "sprites\\spr_player_fall\\spr_player_fall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "24dfe9eb-f190-4801-a649-bcdee80789f9",
             "Value": {
                 "id": "6850509d-b05e-4ab6-85bd-cffdcf0b654c",
@@ -162,7 +170,7 @@
             "Key": "4cdeddd0-4730-4271-89c1-b847876f584a",
             "Value": {
                 "id": "89a0a11f-853a-4cdb-985f-6bea15c9dfc5",
-                "resourcePath": "sprites\\spr_player_jump_up\\spr_player_jump_up.yy",
+                "resourcePath": "sprites\\spr_player_jump\\spr_player_jump.yy",
                 "resourceType": "GMSprite"
             }
         },
