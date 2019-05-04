@@ -25,28 +25,6 @@ if (global.gameIsPaused){
 /// @DnDSaveInfo : "font" "3a373f07-6aff-4039-8e6b-c10d983e6a7d"
 draw_set_font(font0);
 
-/// @DnDAction : YoYo Games.Common.Apply_To
-/// @DnDVersion : 1
-/// @DnDHash : 514AF5B9
-/// @DnDDisabled : 1
-/// @DnDApplyTo : 88f04503-fb64-43bb-97e3-e6e32fe63361
-/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
-/// @DnDVersion : 1
-/// @DnDHash : 15B7B4FA
-/// @DnDDisabled : 1
-/// @DnDParent : 514AF5B9
-/// @DnDArgument : "x1_relative" "1"
-/// @DnDArgument : "y1" "-10"
-/// @DnDArgument : "y1_relative" "1"
-/// @DnDArgument : "x2" "40"
-/// @DnDArgument : "x2_relative" "1"
-/// @DnDArgument : "y2_relative" "1"
-/// @DnDArgument : "value" "player_hp"
-/// @DnDArgument : "backcol" "$FF191919"
-/// @DnDArgument : "barcol" "$FF00004C"
-/// @DnDArgument : "mincol" "$FFB2B2FF"
-/// @DnDArgument : "maxcol" "$FF1919FF"
-
 /// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
 /// @DnDVersion : 1
 /// @DnDHash : 54E29FF3
