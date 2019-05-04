@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "3316595d-88da-42a7-87ba-3a402a56a0f7",
+            "Value": {
+                "id": "79aef332-e99e-4fc9-8a3f-0973e150c06a",
+                "resourcePath": "sprites\\spr_player_leghit\\spr_player_leghit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "39f83186-a1e9-41e3-a832-502c9b556176",
             "Value": {
                 "id": "379fd37e-e1de-43de-9339-9e606150fd45",
@@ -460,6 +468,14 @@
                 "id": "adba3043-48bf-4ae0-807d-17d3469e0260",
                 "resourcePath": "options\\ios\\options_ios.yy",
                 "resourceType": "GMiOSOptions"
+            }
+        },
+        {
+            "Key": "86803d7a-bf66-4938-bc46-726e436163e6",
+            "Value": {
+                "id": "cc2e1601-b945-467e-9930-456b3549a5e4",
+                "resourcePath": "sprites\\spr_player_podsechka\\spr_player_podsechka.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -826,7 +842,7 @@
             "Key": "f71946c4-674c-4603-a786-5102f055d5c6",
             "Value": {
                 "id": "f84bb9df-bc5c-41a1-a778-e230aec9eda2",
-                "resourcePath": "sprites\\spr_player_stand11\\spr_player_stand11.yy",
+                "resourcePath": "sprites\\spr_\\spr_.yy",
                 "resourceType": "GMSprite"
             }
         },
