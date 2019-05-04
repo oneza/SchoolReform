@@ -116,10 +116,60 @@ if key_space&&jump{
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 57F114B2
-/// @DnDArgument : "code" "if (!place_meeting(x,y,obj_enemy_weak)){$(13_10)	instance_destroy(obj_qte_up,true);$(13_10)	instance_destroy(obj_qte_down,true);$(13_10)}$(13_10)$(13_10)if (move_x!=0)&&(wjump==0){$(13_10)obj_player.image_xscale=sign(move_x);$(13_10)}$(13_10)$(13_10)"
+/// @DnDArgument : "code" "if (!place_meeting(x,y,obj_enemy_weak)){$(13_10)	instance_destroy(obj_qte_up,true);$(13_10)	instance_destroy(obj_qte_down,true);$(13_10)}$(13_10)$(13_10)if (in_combat) //Бой$(13_10){$(13_10)	if !collision_line(x - 50, y, x + 50, y, obj_enemy_weak, false, true) $(13_10)	{$(13_10)		alarm[9] = -1$(13_10)		alarm[10] = -1$(13_10)		alarm[11] = -1$(13_10)		in_combat = false$(13_10)	}$(13_10)	qte_placing_x = x - 30 + (other.x - x) / 2$(13_10)	if (showing_qte_number == qte_in_sequence) $(13_10)	{$(13_10)		if (react_qte_number != qte_in_sequence) $(13_10)		{$(13_10)			switch (qte_sequence[react_qte_number]) {$(13_10)		    case obj_qte_up:$(13_10)				if keyboard_check_released(vk_up) $(13_10)				{$(13_10)					react_qte_number++$(13_10)				}$(13_10)		        break;$(13_10)		    case obj_qte_down:$(13_10)				if keyboard_check_released(vk_down) $(13_10)				{$(13_10)					react_qte_number++$(13_10)				}$(13_10)		        break;$(13_10)		    case obj_qte_left:$(13_10)				if keyboard_check_released(vk_left) $(13_10)				{$(13_10)					react_qte_number++$(13_10)				}$(13_10)		        break;$(13_10)		    case obj_qte_right:$(13_10)				if keyboard_check_released(vk_right) $(13_10)				{$(13_10)					react_qte_number++$(13_10)				}$(13_10)		        break;$(13_10)			}$(13_10)		} else $(13_10)		{$(13_10)			enemy_id.en_health -= base_damage$(13_10)			alarm[9] = -1$(13_10)			in_combat = false$(13_10)		}$(13_10)$(13_10)	}$(13_10)}$(13_10)$(13_10)if (move_x!=0)&&(wjump==0){$(13_10)obj_player.image_xscale=sign(move_x);$(13_10)}$(13_10)$(13_10)"
 if (!place_meeting(x,y,obj_enemy_weak)){
 	instance_destroy(obj_qte_up,true);
 	instance_destroy(obj_qte_down,true);
+}
+
+if (in_combat) //Бой
+{
+	if !collision_line(x - 50, y, x + 50, y, obj_enemy_weak, false, true) 
+	{
+		alarm[9] = -1
+		alarm[10] = -1
+		alarm[11] = -1
+		in_combat = false
+	}
+	qte_placing_x = x - 30 + (other.x - x) / 2
+	if (showing_qte_number == qte_in_sequence) 
+	{
+		if (react_qte_number != qte_in_sequence) 
+		{
+			switch (qte_sequence[react_qte_number]) {
+		    case obj_qte_up:
+				if keyboard_check_released(vk_up) 
+				{
+					react_qte_number++
+				}
+		        break;
+		    case obj_qte_down:
+				if keyboard_check_released(vk_down) 
+				{
+					react_qte_number++
+				}
+		        break;
+		    case obj_qte_left:
+				if keyboard_check_released(vk_left) 
+				{
+					react_qte_number++
+				}
+		        break;
+		    case obj_qte_right:
+				if keyboard_check_released(vk_right) 
+				{
+					react_qte_number++
+				}
+		        break;
+			}
+		} else 
+		{
+			enemy_id.en_health -= base_damage
+			alarm[9] = -1
+			in_combat = false
+		}
+
+	}
 }
 
 if (move_x!=0)&&(wjump==0){
