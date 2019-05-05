@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 02CE5457
+/// @DnDArgument : "code" "ui_placement_x = obj_player_ui.ui_placement_x$(13_10)ui_placement_y = obj_player_ui.ui_placement_y"
+ui_placement_x = obj_player_ui.ui_placement_x
+ui_placement_y = obj_player_ui.ui_placement_y
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 /// @DnDVersion : 1
 /// @DnDHash : 40CC0A32
