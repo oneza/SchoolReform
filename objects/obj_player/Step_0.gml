@@ -117,11 +117,11 @@ if key_space&&jump{
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 57F114B2
-/// @DnDArgument : "code" "if (!place_meeting(x,y,obj_enemy_weak)){$(13_10)	instance_destroy(obj_qte_up,true);$(13_10)	instance_destroy(obj_qte_down,true);$(13_10)}$(13_10)$(13_10)if (in_combat) //Бой$(13_10){$(13_10)	if !performing_attack $(13_10)	{$(13_10)		self.sprite_index = spr_player_fightpose	$(13_10)	}$(13_10)	$(13_10)	if !collision_line(x - 30, y, x + 30, y, obj_enemy_weak, false, true) $(13_10)	{$(13_10)		alarm[9] = -1$(13_10)		alarm[10] = -1$(13_10)		alarm[11] = -1$(13_10)		in_combat = false$(13_10)	}$(13_10)	qte_placing_x = x - 30 + (other.x - x) / 2$(13_10)	if (showing_qte_number == qte_in_sequence) $(13_10)	{$(13_10)		if (react_qte_number != qte_in_sequence) $(13_10)		{$(13_10)			switch (qte_sequence[react_qte_number]) {$(13_10)		    case obj_qte_up:$(13_10)				if keyboard_check_released(vk_up) $(13_10)				{$(13_10)					react_qte_number++$(13_10)					performing_attack = true$(13_10)					self.sprite_index = spr_player_leghit$(13_10)					alarm[8] = 8/5 * room_speed / 3$(13_10)	$(13_10)				}$(13_10)		        break;$(13_10)		    case obj_qte_down:$(13_10)				if keyboard_check_released(vk_down) $(13_10)				{$(13_10)					react_qte_number++$(13_10)					performing_attack = true$(13_10)					self.sprite_index = spr_player_podsechka$(13_10)					alarm[8] = 8/5 * room_speed / 3$(13_10)				}$(13_10)		        break;$(13_10)		    case obj_qte_left:$(13_10)				if keyboard_check_released(vk_left) $(13_10)				{$(13_10)					react_qte_number++$(13_10)					performing_attack = true$(13_10)					self.sprite_index = spr_player_punch_left$(13_10)					alarm[8] = 3/6 * room_speed$(13_10)				}$(13_10)		        break;$(13_10)		    case obj_qte_right:$(13_10)				if keyboard_check_released(vk_right) $(13_10)				{$(13_10)					react_qte_number++$(13_10)					performing_attack = true$(13_10)					self.sprite_index = spr_player_punch_right$(13_10)					alarm[8] = 3/6 * room_speed$(13_10)				}$(13_10)		        break;$(13_10)			}$(13_10)		} else $(13_10)		{$(13_10)			enemy_id.en_health -= base_damage$(13_10)			alarm[9] = -1$(13_10)			in_combat = false$(13_10)		}$(13_10)$(13_10)	}$(13_10)}$(13_10)$(13_10)if (move_x!=0)&&(wjump==0){$(13_10)obj_player.image_xscale=sign(move_x);$(13_10)}$(13_10)$(13_10)"
-if (!place_meeting(x,y,obj_enemy_weak)){
-	instance_destroy(obj_qte_up,true);
-	instance_destroy(obj_qte_down,true);
-}
+/// @DnDArgument : "code" "//if (!place_meeting(x,y,obj_enemy_weak)){$(13_10)//	instance_destroy(obj_qte_up,true);$(13_10)//	instance_destroy(obj_qte_down,true);$(13_10)//}$(13_10)$(13_10)if (in_combat) //Бой$(13_10){$(13_10)	if !performing_attack $(13_10)	{$(13_10)		self.sprite_index = spr_player_fightpose	$(13_10)	}$(13_10)	if !collision_line(x - 30, y, x + 30, y, obj_enemy_weak, false, true) $(13_10)	{$(13_10)		alarm[9] = -1$(13_10)		alarm[10] = -1$(13_10)		alarm[11] = -1$(13_10)		for (var i = 0; i < qte_in_sequence; ++i) {$(13_10)		   instance_destroy(qte_sequence[i])$(13_10)		}$(13_10)		in_combat = false$(13_10)	}$(13_10)	else $(13_10)	{$(13_10)		dir_for_sprite = sign(enemy_id.x - x);$(13_10)		obj_player.image_xscale = dir_for_sprite$(13_10)		qte_placing_x = x - 30 + (enemy_id.x - x) / 2$(13_10)		if (showing_qte_number == qte_in_sequence) $(13_10)		{$(13_10)			if (react_qte_number != qte_in_sequence) $(13_10)			{$(13_10)				switch (qte_sequence[react_qte_number]) {$(13_10)			    case obj_qte_up:$(13_10)					if keyboard_check_released(vk_up) $(13_10)					{$(13_10)						react_qte_number++$(13_10)						performing_attack = true$(13_10)						self.sprite_index = spr_player_leghit$(13_10)						alarm[8] = 8/5 * room_speed / 3$(13_10)	$(13_10)					}$(13_10)			        break;$(13_10)			    case obj_qte_down:$(13_10)					if keyboard_check_released(vk_down) $(13_10)					{$(13_10)						react_qte_number++$(13_10)						performing_attack = true$(13_10)						self.sprite_index = spr_player_podsechka$(13_10)						alarm[8] = 8/5 * room_speed / 3$(13_10)					}$(13_10)			        break;$(13_10)			    case obj_qte_left:$(13_10)					if keyboard_check_released(vk_left) $(13_10)					{$(13_10)						react_qte_number++$(13_10)						performing_attack = true$(13_10)						self.sprite_index = spr_player_punch_left$(13_10)						alarm[8] = 3/6 * room_speed$(13_10)					}$(13_10)			        break;$(13_10)			    case obj_qte_right:$(13_10)					if keyboard_check_released(vk_right) $(13_10)					{$(13_10)						react_qte_number++$(13_10)						performing_attack = true$(13_10)						self.sprite_index = spr_player_punch_right$(13_10)						alarm[8] = 3/6 * room_speed$(13_10)					}$(13_10)			        break;$(13_10)				}$(13_10)			} else $(13_10)			{$(13_10)				enemy_id.en_health -= base_damage$(13_10)				alarm[9] = -1$(13_10)				in_combat = false$(13_10)			}$(13_10)		}$(13_10)	}$(13_10)	$(13_10)}$(13_10)$(13_10)if (move_x!=0)&&(wjump==0){$(13_10)obj_player.image_xscale=sign(move_x);$(13_10)}$(13_10)$(13_10)"
+//if (!place_meeting(x,y,obj_enemy_weak)){
+//	instance_destroy(obj_qte_up,true);
+//	instance_destroy(obj_qte_down,true);
+//}
 
 if (in_combat) //Бой
 {
@@ -129,66 +129,73 @@ if (in_combat) //Бой
 	{
 		self.sprite_index = spr_player_fightpose	
 	}
-	
 	if !collision_line(x - 30, y, x + 30, y, obj_enemy_weak, false, true) 
 	{
 		alarm[9] = -1
 		alarm[10] = -1
 		alarm[11] = -1
+		for (var i = 0; i < qte_in_sequence; ++i) {
+		   instance_destroy(qte_sequence[i])
+		}
 		in_combat = false
 	}
-	qte_placing_x = x - 30 + (other.x - x) / 2
-	if (showing_qte_number == qte_in_sequence) 
+	else 
 	{
-		if (react_qte_number != qte_in_sequence) 
+		dir_for_sprite = sign(enemy_id.x - x);
+		obj_player.image_xscale = dir_for_sprite
+		qte_placing_x = x - 30 + (enemy_id.x - x) / 2
+		if (showing_qte_number == qte_in_sequence) 
 		{
-			switch (qte_sequence[react_qte_number]) {
-		    case obj_qte_up:
-				if keyboard_check_released(vk_up) 
-				{
-					react_qte_number++
-					performing_attack = true
-					self.sprite_index = spr_player_leghit
-					alarm[8] = 8/5 * room_speed / 3
+			if (react_qte_number != qte_in_sequence) 
+			{
+				switch (qte_sequence[react_qte_number]) {
+			    case obj_qte_up:
+					if keyboard_check_released(vk_up) 
+					{
+						react_qte_number++
+						performing_attack = true
+						self.sprite_index = spr_player_leghit
+						alarm[8] = 8/5 * room_speed / 3
 	
+					}
+			        break;
+			    case obj_qte_down:
+					if keyboard_check_released(vk_down) 
+					{
+						react_qte_number++
+						performing_attack = true
+						self.sprite_index = spr_player_podsechka
+						alarm[8] = 8/5 * room_speed / 3
+					}
+			        break;
+			    case obj_qte_left:
+					if keyboard_check_released(vk_left) 
+					{
+						react_qte_number++
+						performing_attack = true
+						self.sprite_index = spr_player_punch_left
+						alarm[8] = 3/6 * room_speed
+					}
+			        break;
+			    case obj_qte_right:
+					if keyboard_check_released(vk_right) 
+					{
+						react_qte_number++
+						performing_attack = true
+						self.sprite_index = spr_player_punch_right
+						alarm[8] = 3/6 * room_speed
+					}
+			        break;
 				}
-		        break;
-		    case obj_qte_down:
-				if keyboard_check_released(vk_down) 
-				{
-					react_qte_number++
-					performing_attack = true
-					self.sprite_index = spr_player_podsechka
-					alarm[8] = 8/5 * room_speed / 3
-				}
-		        break;
-		    case obj_qte_left:
-				if keyboard_check_released(vk_left) 
-				{
-					react_qte_number++
-					performing_attack = true
-					self.sprite_index = spr_player_punch_left
-					alarm[8] = 3/6 * room_speed
-				}
-		        break;
-		    case obj_qte_right:
-				if keyboard_check_released(vk_right) 
-				{
-					react_qte_number++
-					performing_attack = true
-					self.sprite_index = spr_player_punch_right
-					alarm[8] = 3/6 * room_speed
-				}
-		        break;
+			} else 
+			{
+				enemy_id.en_health -= base_damage
+				alarm[9] = -1
+				in_combat = false
 			}
-		} else 
-		{
-			enemy_id.en_health -= base_damage
-			alarm[9] = -1
-			in_combat = false
 		}
-
 	}
+	
 }
 
 if (move_x!=0)&&(wjump==0){

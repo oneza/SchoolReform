@@ -431,6 +431,14 @@
             }
         },
         {
+            "Key": "72476c90-db49-48f2-a5b9-7c545db51683",
+            "Value": {
+                "id": "820594b0-ecb9-44e0-b13a-6e65e0856af0",
+                "resourcePath": "sprites\\spr_enemy_weak_punch\\spr_enemy_weak_punch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "74cb56ef-7b2d-415c-9151-0907dd079a13",
             "Value": {
                 "id": "5a1d3543-7f96-4522-bc34-38407bef3dcf",
@@ -639,6 +647,14 @@
             }
         },
         {
+            "Key": "ab2eaabc-2d81-4d61-bf31-a6813001d09a",
+            "Value": {
+                "id": "00a8c24b-1885-4066-b5f7-635d85f5aa3d",
+                "resourcePath": "sprites\\sprite30\\sprite30.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ae07ec2d-82db-4e07-9fcf-b4724b5dfbd7",
             "Value": {
                 "id": "11649332-300a-4e47-beff-eb702c948e55",
@@ -794,7 +810,7 @@
             "Key": "e16173ce-b4dd-4434-9021-29a887797cef",
             "Value": {
                 "id": "abd0b2bf-c36e-4876-84bf-0c4dde6e8da0",
-                "resourcePath": "sprites\\sprite21\\sprite21.yy",
+                "resourcePath": "sprites\\spr_enemy_weak_stand\\spr_enemy_weak_stand.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -940,6 +956,14 @@
                 "id": "a2e88b63-5e03-4fa3-a72a-3daaff95fdbb",
                 "resourcePath": "objects\\obj_floor\\obj_floor.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fce1eb80-e4dc-46ac-a449-5142ee3937bc",
+            "Value": {
+                "id": "b142314e-ccb7-435a-979f-eda2a5df22d7",
+                "resourcePath": "sprites\\spr_enemy_weak_run\\spr_enemy_weak_run.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
