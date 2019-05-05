@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "39a70e72-7835-4408-af0a-f2fe3970f21e",
+            "Value": {
+                "id": "cfcc6c2a-34ab-4283-b6ff-ccf80fce322c",
+                "resourcePath": "sprites\\spr_player_otjimania\\spr_player_otjimania.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "39f83186-a1e9-41e3-a832-502c9b556176",
             "Value": {
                 "id": "379fd37e-e1de-43de-9339-9e606150fd45",
