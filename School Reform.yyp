@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "2a46c508-1a23-47d5-a0de-9e657e3f8149",
+            "Value": {
+                "id": "a2847ba3-cdbd-4d06-81a9-8c8bc686c7ce",
+                "resourcePath": "objects\\obj_player_otjimania\\obj_player_otjimania.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2ce90210-0cc2-4311-8ed4-32950db4d87a",
             "Value": {
                 "id": "6c0e94ca-5e60-4544-87ba-2247ca0e7ea3",
@@ -884,6 +892,14 @@
                 "id": "53b61b2c-4dfb-4b20-8284-fe1c8701f278",
                 "resourcePath": "options\\android\\options_android.yy",
                 "resourceType": "GMAndroidOptions"
+            }
+        },
+        {
+            "Key": "e4ad3b68-ea67-49df-b059-13a32a22c70d",
+            "Value": {
+                "id": "6601539f-747e-4f17-93d6-655094aa83f1",
+                "resourcePath": "views\\e4ad3b68-ea67-49df-b059-13a32a22c70d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
