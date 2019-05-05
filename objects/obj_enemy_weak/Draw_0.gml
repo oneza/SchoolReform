@@ -3,9 +3,9 @@
 /// @DnDHash : 77A9CE44
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "sprite" "sprite21"
+/// @DnDArgument : "sprite" "spr_enemy_weak_stand"
 /// @DnDSaveInfo : "sprite" "e16173ce-b4dd-4434-9021-29a887797cef"
-draw_sprite(sprite21, 0, x + 0, y + 0);
+draw_sprite(spr_enemy_weak_stand, 0, x + 0, y + 0);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 /// @DnDVersion : 1
