@@ -11,7 +11,10 @@ if(l24FB63C0_0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 472B8F9A
 	/// @DnDParent : 24FB63C0
-	/// @DnDArgument : "code" "ui_placement_x = obj_player.x - x_offset$(13_10)ui_placement_y = obj_player.y - y_offset"
-	ui_placement_x = obj_player.x - x_offset
-	ui_placement_y = obj_player.y - y_offset
+	/// @DnDArgument : "code" "var camera = view_get_camera(0)$(13_10)ui_placement_x = camera_get_view_x(camera) + 5$(13_10)ui_placement_y = camera_get_view_y(camera)$(13_10)//ui_placement_x = view_get_xport(0) - x_offset$(13_10)//ui_placement_y = view_get_yport(0) - y_offset"
+	var camera = view_get_camera(0)
+	ui_placement_x = camera_get_view_x(camera) + 5
+	ui_placement_y = camera_get_view_y(camera)
+	//ui_placement_x = view_get_xport(0) - x_offset
+	//ui_placement_y = view_get_yport(0) - y_offset
 }
