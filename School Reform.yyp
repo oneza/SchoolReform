@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "772ca792-8e75-401c-b624-007d32dcd55e",
+            "Value": {
+                "id": "f01d3374-5a04-4dbf-9b81-865c6928e1dc",
+                "resourcePath": "sprites\\spr_boss_otjimania\\spr_boss_otjimania.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7888278b-c490-483c-8351-9fbb8183f3d3",
             "Value": {
                 "id": "def8fdcd-94dd-46c7-9cce-df3daa5edf7c",
@@ -659,6 +667,14 @@
             "Value": {
                 "id": "00a8c24b-1885-4066-b5f7-635d85f5aa3d",
                 "resourcePath": "sprites\\sprite30\\sprite30.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "adccf756-2d14-4d66-b44e-6d4f893af759",
+            "Value": {
+                "id": "49d74b82-6208-442c-8718-240f9698a930",
+                "resourcePath": "sprites\\sprite36\\sprite36.yy",
                 "resourceType": "GMSprite"
             }
         },
