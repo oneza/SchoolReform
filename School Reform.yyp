@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "38a04a39-f470-4455-ace6-797c6564ea83",
+            "Value": {
+                "id": "39941779-0eea-4d95-9f41-9538d694264b",
+                "resourcePath": "objects\\udalite_potom\\udalite_potom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "39a70e72-7835-4408-af0a-f2fe3970f21e",
             "Value": {
                 "id": "cfcc6c2a-34ab-4283-b6ff-ccf80fce322c",

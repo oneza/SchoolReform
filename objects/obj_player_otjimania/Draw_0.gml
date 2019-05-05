@@ -86,29 +86,21 @@ if(timer <= 0)
 		/// @DnDArgument : "caption" ""YOU LOST ""
 		draw_text(x + -50, y + -60, string("YOU LOST ") + "");
 	
+		/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 59D5FB78
+		/// @DnDParent : 671AD8F7
+		/// @DnDArgument : "code" "obj_firstboss.sprite_index=spr_firstboss;$(13_10)obj_firstboss.otjatia=0;$(13_10)obj_firstboss.y+=80$(13_10)instance_activate_object(obj_player);$(13_10)obj_player.x-=20"
+		obj_firstboss.sprite_index=spr_firstboss;
+		obj_firstboss.otjatia=0;
+		obj_firstboss.y+=80
+		instance_activate_object(obj_player);
+		obj_player.x-=20
+	
 		/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 		/// @DnDVersion : 1
 		/// @DnDHash : 4356600E
 		/// @DnDParent : 671AD8F7
 		instance_destroy();
-	
-		/// @DnDAction : YoYo Games.Instances.Create_Instance
-		/// @DnDVersion : 1
-		/// @DnDHash : 4F1D6D50
-		/// @DnDParent : 671AD8F7
-		/// @DnDArgument : "xpos_relative" "1"
-		/// @DnDArgument : "ypos" "-70"
-		/// @DnDArgument : "ypos_relative" "1"
-		/// @DnDArgument : "objectid" "obj_player"
-		/// @DnDSaveInfo : "objectid" "88f04503-fb64-43bb-97e3-e6e32fe63361"
-		instance_create_layer(x + 0, y + -70, "Instances", obj_player);
-	
-		/// @DnDAction : YoYo Games.Common.Execute_Code
-		/// @DnDVersion : 1
-		/// @DnDHash : 59D5FB78
-		/// @DnDParent : 671AD8F7
-		/// @DnDArgument : "code" "obj_firstboss.sprite_index=spr_firstboss;$(13_10)obj_firstboss.y+=80"
-		obj_firstboss.sprite_index=spr_firstboss;
-		obj_firstboss.y+=80
 	}
 }

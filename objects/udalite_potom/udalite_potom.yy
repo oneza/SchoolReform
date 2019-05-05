@@ -1,18 +1,18 @@
 {
-    "id": "a1479f3b-2d7c-49e9-a8a7-c7d6662d9462",
+    "id": "38a04a39-f470-4455-ace6-797c6564ea83",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_door",
+    "name": "udalite_potom",
     "eventList": [
         {
-            "id": "61aef492-38fe-4be9-a17c-22dd6ea37d8e",
+            "id": "bada0ff0-276f-4a89-921c-0bc271fa2ac5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": true,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "a1479f3b-2d7c-49e9-a8a7-c7d6662d9462"
+            "eventtype": 0,
+            "m_owner": "38a04a39-f470-4455-ace6-797c6564ea83"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "8f87caea-e053-42e0-b5ec-971dd0bbf562",
+    "spriteId": "f9f88d7b-618d-4b24-897f-2c20ab34acd1",
     "visible": true
 }
