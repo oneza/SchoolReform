@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "3d498ab9-4f24-45b2-a9db-dd7f5e4d4b8c",
+            "Value": {
+                "id": "51561a7c-a24f-437d-9266-c20f1b6b0ea7",
+                "resourcePath": "objects\\obj_fordoors\\obj_fordoors.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3da5985c-ef35-41e2-b361-daa43c740ba5",
             "Value": {
                 "id": "afa0729f-0f14-4927-ba23-3cb449d2195e",
