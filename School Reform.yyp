@@ -31,14 +31,6 @@
     },
     "resources": [
         {
-            "Key": "03c7def7-a4a3-498d-aa0f-3d8703795812",
-            "Value": {
-                "id": "e990e369-6de8-4513-a849-aa6e01b39548",
-                "resourcePath": "views\\8c592997-a1ed-4111-9f5d-2614cfc5ce6d-room.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "0e5954a7-fa0c-4e23-a12c-50e7fb4dec6f",
             "Value": {
                 "id": "c8294bce-ac8d-4ca7-b312-caeb817255ed",
