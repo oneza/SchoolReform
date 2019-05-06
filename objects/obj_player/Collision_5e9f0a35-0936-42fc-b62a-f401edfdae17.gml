@@ -1,8 +1,6 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 60C78545
-/// @DnDBreak : 1
-
 /// @DnDArgument : "code" "if (!in_combat) {$(13_10)	enemy_id = other.id$(13_10)	in_combat = true$(13_10)	//qte_in_sequence = []$(13_10)	for (var i = 0; i < qte_in_sequence; ++i) {$(13_10)	    randomize();$(13_10)		qte_sequence[i] = irandom(3)$(13_10)		switch (qte_sequence[i]) {$(13_10)		    case 0:$(13_10)		        qte_sequence[i] = obj_qte_up$(13_10)		        break;$(13_10)		    case 1:$(13_10)		        qte_sequence[i] = obj_qte_down$(13_10)		        break;			$(13_10)		    case 2:$(13_10)		        qte_sequence[i] = obj_qte_left$(13_10)		        break;$(13_10)		    case 3:$(13_10)		        qte_sequence[i] = obj_qte_right$(13_10)		        break;			$(13_10)		}$(13_10)	}$(13_10)	showing_qte_number = 0$(13_10)	react_qte_number = 0$(13_10)	alarm[10] = 5$(13_10)}$(13_10)$(13_10)"
 if (!in_combat) {
 	enemy_id = other.id
