@@ -28,7 +28,9 @@ switch(state){
 
 			}
 		}
-		if (abs(obj_player.x-x) < combat_start_range){
+		//var collision_with_player = collision_circle(x, y, combat_start_range, obj_player, true)
+		if collision_circle(x, y, combat_start_range, obj_player, false, true)
+		{
 			hsp = 0; 
 			in_combat = true
 		}
@@ -46,7 +48,8 @@ switch(state){
 			dir = 1;
 			hsp = patrol_speed * dir;
 		}
-		if(round(obj_enemy_weak.x) >= round(en_x + 75)) {
+		if(round(obj_enemy_weak.x) >= round(en_x + 75))
+		{
 			dir = -1;
 			hsp = patrol_speed * dir;
 		}
@@ -64,9 +67,6 @@ if(place_meeting(round(x+hsp), round(y), obj_floor)){
 	}
 	hsp = 0;
 }
-
-
-
 x += hsp;
 
 if(place_meeting(round(x), round(y + vsp), obj_floor)){
