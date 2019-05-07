@@ -256,7 +256,7 @@ if (in_combat)
 		for (var i = 0; i < qte_in_sequence; ++i) {
 		   instance_destroy(qte_sequence[i])
 		}
-		in_combat = false
+		alarm[9] = 1
 	}
 	else 
 	{
