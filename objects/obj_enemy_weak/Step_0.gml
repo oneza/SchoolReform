@@ -14,46 +14,54 @@ switch(state){
 		hsp = chase_speed * dir;
 		vsp = min(7, vsp + 0.5);
 		if(distance_to_object(obj_player) > agro_range){
-			if(obj_enemy_weak.x != en_x){
-				dir = sign(en_x - obj_enemy_weak.x);
-				if (abs(obj_enemy_weak.x - en_x) > patrol_speed) {
+			if(x != en_x){
+				dir = sign(en_x - x);
+				if (abs(x - en_x) > patrol_speed) {
 					hsp = patrol_speed * dir;
 				}
 				else 
 				{
 					hsp = 0
-					obj_enemy_weak.x = en_x
+					x = en_x
 					state = 1
 				}
 
 			}
 		}
-		//var collision_with_player = collision_circle(x, y, combat_start_range, obj_player, true)
-		if collision_circle(x, y, combat_start_range, obj_player, false, true)
+
+		if instance_exists(obj_player) 
 		{
-			hsp = 0; 
-			in_combat = true
+			if point_distance(x, y, obj_player.x, obj_player.y) < combat_start_range
+			{
+				hsp = 0; 
+				in_combat = true
+			}
+			else 
+			{
+				in_combat = false
+			}
 		}
-		else 
-		{
-			in_combat = false
-		}
+
 	}
 	break;
 	case 1:
 	{
-		hsp = patrol_speed * dir;
+		switch (patrol_direction) {
+		    case 1:
+		        if round(x) >= round(en_x + patrol_range) || place_meeting(round(x+hsp), round(y), obj_floor)
+				{
+					patrol_direction = -1;
+				}
+		        break;
+			case -1:
+				if(round(x) <= round(en_x - patrol_range)) || place_meeting(round(x+hsp), round(y), obj_floor)
+				{
+					patrol_direction = 1;
+				}
+		        break;
+		}
+		hsp = patrol_speed * patrol_direction;
 		vsp = min(7, vsp + 0.5);
-		if(round(obj_enemy_weak.x) <= round(en_x - 75)) {
-			dir = 1;
-			hsp = patrol_speed * dir;
-		}
-		if(round(obj_enemy_weak.x) >= round(en_x + 75))
-		{
-			dir = -1;
-			hsp = patrol_speed * dir;
-		}
-
 		if(distance_to_object(obj_player) < agro_range){
 			state = 2;
 		}
@@ -68,6 +76,7 @@ if(place_meeting(round(x+hsp), round(y), obj_floor)){
 	hsp = 0;
 }
 x += hsp;
+
 
 if(place_meeting(round(x), round(y + vsp), obj_floor)){
 	while(!place_meeting(round(x), round(y + sign(vsp)), obj_floor)){
@@ -88,7 +97,7 @@ else
 	self.image_xscale=sign(hsp);
 }
 
-//СМЕНА СПРАЙТОВ НА СКОРУЮ РУКУ
+//СМЕНА СПРАЙТОВ НА СКОРУЮ НОГУ
 if (!in_combat) 
 {
 	self.sprite_index=spr_enemy_weak_run

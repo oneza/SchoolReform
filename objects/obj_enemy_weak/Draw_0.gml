@@ -1,3 +1,15 @@
+/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDVersion : 1
+/// @DnDHash : 0D35C3AC
+/// @DnDDisabled : 1
+/// @DnDArgument : "x" "-10"
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-30"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "caption" ""
+/// @DnDArgument : "var" "patrol_direction"
+
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Self
 /// @DnDVersion : 1
 /// @DnDHash : 4BA19583
