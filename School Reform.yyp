@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "ca7bf4fd-d189-4b81-a32a-5abf90e3712f",
+            "Value": {
+                "id": "5d7ef199-d0bf-4800-bb8f-8e8cb46b12b0",
+                "resourcePath": "rooms\\rm_level_1\\rm_level_1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "cb2f7842-0d36-492e-aca9-cd7e311746a3",
             "Value": {
                 "id": "fd062c11-8134-4a08-b6f3-fdd3f4532fe2",

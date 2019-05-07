@@ -9,7 +9,7 @@ if (!in_combat)&&(speed_v==0)&&(speed_h==0) {self.sprite_index=spr_player_stand}
 if (!in_combat)&&(speed_v > 0) {self.sprite_index=spr_player_fall}
 if (!in_combat)&&(speed_v < 0) {self.sprite_index=spr_player_jump}
 //ГОРИЗОНТАЛЬНЫЕ ДВИЖЕНИЯ	 
-var move_x = (key_right - key_left);
+move_x = (key_right - key_left);
 
 if (speed_h > 0.5)
 {
@@ -42,7 +42,9 @@ if move_x != 0
 {
 	if place_meeting (x + sign(move_x), y, obj_floor)
     {
-		if (!in_combat) {self.sprite_index=spr_player_slide}
+		self.sprite_index=spr_player_slide
+		obj_player.image_xscale = sign(move_x)
+		x -= sign(move_x)
 		if speed_v > 0
 		{
 			speed_v -= speed_v/4

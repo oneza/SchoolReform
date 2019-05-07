@@ -14,5 +14,4 @@ draw_rectangle_colour(bbox_left,bbox_top,bbox_right,bbox_bottom,c_red,c_red,c_re
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-30"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""
-/// @DnDArgument : "var" "speed_h"
+/// @DnDArgument : "caption" "place_meeting (x + sign(move_x), y, obj_floor)"
