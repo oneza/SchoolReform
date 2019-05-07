@@ -47,7 +47,7 @@ if move_x != 0
 		{
 			speed_v -= speed_v/4
 		}
-		if key_space
+		if key_space && !place_meeting (x, y + 1, obj_floor)
 		{
 			wjumped = true
 			alarm_wjumped = room_speed * 0.5
@@ -99,7 +99,7 @@ else
 	alarm_wjumped -= 1
 }
 
-
+if (!in_combat)&&(speed_v==0)&&(abs(speed_h) <= 0.7) {self.sprite_index=spr_player_stand}
 
 
 /////////////////////////////////////////////////////////////////////////////
