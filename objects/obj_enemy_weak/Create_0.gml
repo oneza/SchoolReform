@@ -1,7 +1,7 @@
 en_health = 100
 en_x = x;
 en_y = y;
-state = 1//idle = 0 //patrol = 1 //chase = 2
+state = 1//back_patrol = 0 //patrol = 1 //chase = 2
 in_combat = false;
 attack_player = false
 combat_start_range = 43

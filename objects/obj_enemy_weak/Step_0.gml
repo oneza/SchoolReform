@@ -1,20 +1,9 @@
 switch(state){
-	case 0: //описание афк чела, для которого есть гарвитация и он начинает чейзить при приближении игрока
+	case 0: //Возвращение в состояние 1
 	{
-		hsp = 0;
-		vsp = min(7, vsp + 0.5);
-		if(distance_to_object(obj_player) < agro_range){
-			state = 2;
-		}
-	}
-	break;
-	case 2: 
-	{
-		dir = sign(obj_player.x - x);
-		hsp = chase_speed * dir;
-		vsp = min(7, vsp + 0.5);
-		if(distance_to_object(obj_player) > agro_range){
-			if(x != en_x){
+		in_combat = false
+			if(x != en_x)
+			{
 				dir = sign(en_x - x);
 				if (abs(x - en_x) > patrol_speed) {
 					hsp = patrol_speed * dir;
@@ -25,13 +14,26 @@ switch(state){
 					x = en_x
 					state = 1
 				}
-
+			}			
+	}
+	break;
+	case 2: 
+	{
+		dir = sign(obj_player.x - x);
+		hsp = chase_speed * dir;
+		vsp = min(7, vsp + 0.5);
+		if(distance_to_object(obj_player) > agro_range) || place_meeting(round(x + hsp), round(y), obj_floor) 
+		{
+			if place_meeting(round(x + hsp), round(y), obj_floor) 
+			{
+				can_agro = false	
 			}
+			state = 0
 		}
 
 		if instance_exists(obj_player) 
 		{
-			if point_distance(x, y, obj_player.x, obj_player.y) < combat_start_range
+			if point_distance(x, y, obj_player.x, obj_player.y) < combat_start_range 
 			{
 				hsp = 0; 
 				in_combat = true
@@ -46,6 +48,7 @@ switch(state){
 	break;
 	case 1:
 	{
+		can_agro = true
 		switch (patrol_direction) {
 		    case 1:
 		        if round(x) >= round(en_x + patrol_range) || place_meeting(round(x+hsp), round(y), obj_floor)
@@ -68,6 +71,7 @@ switch(state){
 		}
 	}
 	break;
+	
 }
 
 if(place_meeting(round(x+hsp), round(y), obj_floor)){
