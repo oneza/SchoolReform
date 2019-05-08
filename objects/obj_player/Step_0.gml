@@ -36,12 +36,13 @@ else
 	}
 }
 
-
+sliding = false
 //СКОЛЬЖЕНИЕ ПО СТЕНЕ
 if move_x != 0
 {
 	if place_meeting (x + sign(move_x), y, obj_floor)
     {
+		sliding = true
 		self.sprite_index=spr_player_slide
 		obj_player.image_xscale = sign(move_x)
 		x -= sign(move_x)
@@ -103,7 +104,7 @@ else
 	alarm_wjumped -= 1
 }
 
-if (!in_combat)&&(speed_v==0)&&(abs(speed_h) <= 0.7) {self.sprite_index=spr_player_stand}
+if (!sliding)&&(!in_combat)&&(speed_v==0)&&(abs(speed_h) <= 0.7) {self.sprite_index=spr_player_stand}
 
 
 /////////////////////////////////////////////////////////////////////////////

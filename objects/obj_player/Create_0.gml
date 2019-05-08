@@ -7,6 +7,7 @@ wjmpspeed=10
 spd = 7
 wjumped = false
 alarm_wjumped = 0
+sliding = false
 
 //wjump=0
 //move_x=0;
