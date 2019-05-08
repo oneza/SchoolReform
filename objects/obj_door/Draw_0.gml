@@ -19,5 +19,6 @@ if instance_exists(obj_player)
 		{
 			draw_text(x + dir * 88 , y + 20, "NAZMI E DEBIL");
 		}
+		draw_set_alpha(1);
 	}
 }
