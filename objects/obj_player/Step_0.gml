@@ -53,7 +53,7 @@ if move_x != 0
 		if key_space && !place_meeting (x, y + 1, obj_floor)
 		{
 			wjumped = true
-			alarm_wjumped = room_speed * 0.5
+			alarm_wjumped = 1
 			speed_v = -jmpspeed
 			speed_h = wjmpspeed * -sign(move_x)
 		}
