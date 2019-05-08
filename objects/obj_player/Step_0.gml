@@ -9,7 +9,7 @@ if (!in_combat)&&(speed_v==0)&&(speed_h==0) {self.sprite_index=spr_player_stand}
 if (!in_combat)&&(speed_v > 0) {self.sprite_index=spr_player_fall}
 if (!in_combat)&&(speed_v < 0) {self.sprite_index=spr_player_jump}
 //ГОРИЗОНТАЛЬНЫЕ ДВИЖЕНИЯ	 
-move_x = (key_right - key_left);
+var move_x = (key_right - key_left);
 
 if (speed_h > 0.5)
 {
@@ -60,12 +60,14 @@ if move_x != 0
 }
 
 
-//ПРЫЖОК С ЗЕМЛИ И ПАДЕНИЕ
+//ПАДЕНИЕ
 if !place_meeting (x, y + 1, obj_floor)
     {
         speed_v = speed_v + gravity_value ;
     }
-else
+	
+//ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
+if place_meeting (x, y + 1, obj_floor) || (abs(speed_h) > 0.5 && place_meeting (x - speed_h, y + 1, obj_floor))
 {
 	if (!in_combat)&&(speed_v==0)&&(speed_h !=0) {self.sprite_index=spr_player_run}
 	if key_space
