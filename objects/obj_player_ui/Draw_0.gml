@@ -28,25 +28,25 @@ if(l6BA987DD_0)
 	/// @DnDParent : 6BA987DD
 	/// @DnDArgument : "x" "ui_placement_x"
 	/// @DnDArgument : "y" "ui_placement_y"
-	/// @DnDArgument : "xscale" "0.4"
-	/// @DnDArgument : "yscale" "0.4"
+	/// @DnDArgument : "xscale" "0.3"
+	/// @DnDArgument : "yscale" "0.3"
 	/// @DnDArgument : "caption" ""Oleg""
-	draw_text_transformed(ui_placement_x, ui_placement_y, string("Oleg") + "", 0.4, 0.4, 0);
+	draw_text_transformed(ui_placement_x, ui_placement_y, string("Oleg") + "", 0.3, 0.3, 0);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 	/// @DnDVersion : 1
 	/// @DnDHash : 521ACEBE
 	/// @DnDParent : 6BA987DD
 	/// @DnDArgument : "x1" "ui_placement_x "
-	/// @DnDArgument : "y1" "ui_placement_y + 13"
-	/// @DnDArgument : "x2" "ui_placement_x + 00040"
-	/// @DnDArgument : "y2" "ui_placement_y + 20"
+	/// @DnDArgument : "y1" "ui_placement_y + 12"
+	/// @DnDArgument : "x2" "ui_placement_x + 30"
+	/// @DnDArgument : "y2" "ui_placement_y + 15"
 	/// @DnDArgument : "value" "obj_player.player_hp"
 	/// @DnDArgument : "backcol" "$FF191919"
 	/// @DnDArgument : "barcol" "$FF00004C"
 	/// @DnDArgument : "mincol" "$FF0C71FF"
 	/// @DnDArgument : "maxcol" "$FF00FF00"
-	draw_healthbar(ui_placement_x , ui_placement_y + 13, ui_placement_x + 00040, ui_placement_y + 20, obj_player.player_hp, $FF191919 & $FFFFFF, $FF0C71FF & $FFFFFF, $FF00FF00 & $FFFFFF, 0, (($FF191919>>24) != 0), (($FF00004C>>24) != 0));
+	draw_healthbar(ui_placement_x , ui_placement_y + 12, ui_placement_x + 30, ui_placement_y + 15, obj_player.player_hp, $FF191919 & $FFFFFF, $FF0C71FF & $FFFFFF, $FF00FF00 & $FFFFFF, 0, (($FF191919>>24) != 0), (($FF00004C>>24) != 0));
 }
 
 /// @DnDAction : YoYo Games.Common.Else

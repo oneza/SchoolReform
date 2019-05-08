@@ -10,7 +10,7 @@
     "bbox_left": 35,
     "bbox_right": 65,
     "bbox_top": 9,
-    "bboxmode": 2,
+    "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
     "edgeFiltering": false,
@@ -87,6 +87,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 100,
-    "xorig": 50,
+    "xorig": 49,
     "yorig": 17
 }

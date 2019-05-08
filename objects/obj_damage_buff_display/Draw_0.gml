@@ -9,16 +9,16 @@ ui_placement_y = obj_player_ui.ui_placement_y
 /// @DnDVersion : 1
 /// @DnDHash : 1E180B2A
 /// @DnDArgument : "x1" "ui_placement_x + 9"
-/// @DnDArgument : "y1" "ui_placement_y + 22"
+/// @DnDArgument : "y1" "ui_placement_y + 17"
 /// @DnDArgument : "x2" "ui_placement_x + 16"
-/// @DnDArgument : "y2" "ui_placement_y + 33"
+/// @DnDArgument : "y2" "ui_placement_y + 27"
 /// @DnDArgument : "direction" "3"
 /// @DnDArgument : "value" "current_buff_duration"
 /// @DnDArgument : "backcol" "$FF191919"
 /// @DnDArgument : "barcol" "$FF000000"
 /// @DnDArgument : "mincol" "$FF0000FF"
 /// @DnDArgument : "maxcol" "$FF00FF00"
-draw_healthbar(ui_placement_x + 9, ui_placement_y + 22, ui_placement_x + 16, ui_placement_y + 33, current_buff_duration, $FF191919 & $FFFFFF, $FF0000FF & $FFFFFF, $FF00FF00 & $FFFFFF, 3, (($FF191919>>24) != 0), (($FF000000>>24) != 0));
+draw_healthbar(ui_placement_x + 9, ui_placement_y + 17, ui_placement_x + 16, ui_placement_y + 27, current_buff_duration, $FF191919 & $FFFFFF, $FF0000FF & $FFFFFF, $FF00FF00 & $FFFFFF, 3, (($FF191919>>24) != 0), (($FF000000>>24) != 0));
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
