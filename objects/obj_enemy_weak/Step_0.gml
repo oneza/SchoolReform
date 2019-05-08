@@ -62,7 +62,8 @@ switch(state){
 		}
 		hsp = patrol_speed * patrol_direction;
 		vsp = min(7, vsp + 0.5);
-		if(distance_to_object(obj_player) < agro_range){
+		if collision_ellipse(x - agro_range/2, y - agro_range/4, x + agro_range/2, y + agro_range/4, obj_player, false, true)
+		{
 			state = 2;
 		}
 	}
