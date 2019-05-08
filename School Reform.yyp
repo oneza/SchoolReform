@@ -711,14 +711,6 @@
             }
         },
         {
-            "Key": "800a2946-203c-40e6-ae7d-7233e1103f1a",
-            "Value": {
-                "id": "ab2d5040-ebff-4022-b9f5-3f56c0565769",
-                "resourcePath": "objects\\obj_fordoor\\obj_fordoor.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "830f2b0e-4569-419d-9077-5549d6acd814",
             "Value": {
                 "id": "9fd77fbe-269f-4156-910e-341cc109cb39",
