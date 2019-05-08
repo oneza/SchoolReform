@@ -14,54 +14,43 @@ switch(state){
 		hsp = chase_speed * dir;
 		vsp = min(7, vsp + 0.5);
 		if(distance_to_object(obj_player) > agro_range){
-			if(x != en_x){
-				dir = sign(en_x - x);
-				if (abs(x - en_x) > patrol_speed) {
+			if(obj_enemy_weak.x != en_x){
+				dir = sign(en_x - obj_enemy_weak.x);
+				if (abs(obj_enemy_weak.x - en_x) > patrol_speed) {
 					hsp = patrol_speed * dir;
 				}
 				else 
 				{
 					hsp = 0
-					x = en_x
+					obj_enemy_weak.x = en_x
 					state = 1
 				}
 
 			}
 		}
-
-		if instance_exists(obj_player) 
-		{
-			if point_distance(x, y, obj_player.x, obj_player.y) < combat_start_range
-			{
-				hsp = 0; 
-				in_combat = true
-			}
-			else 
-			{
-				in_combat = false
-			}
+		if (abs(obj_player.x-x) < combat_start_range){
+			hsp = 0; 
+			in_combat = true
 		}
-
+		else 
+		{
+			in_combat = false
+		}
 	}
 	break;
 	case 1:
 	{
-		switch (patrol_direction) {
-		    case 1:
-		        if round(x) >= round(en_x + patrol_range) || place_meeting(round(x+hsp), round(y), obj_floor)
-				{
-					patrol_direction = -1;
-				}
-		        break;
-			case -1:
-				if(round(x) <= round(en_x - patrol_range)) || place_meeting(round(x+hsp), round(y), obj_floor)
-				{
-					patrol_direction = 1;
-				}
-		        break;
-		}
-		hsp = patrol_speed * patrol_direction;
+		hsp = patrol_speed * dir;
 		vsp = min(7, vsp + 0.5);
+		if(round(obj_enemy_weak.x) <= round(en_x - 75)) {
+			dir = 1;
+			hsp = patrol_speed * dir;
+		}
+		if(round(obj_enemy_weak.x) >= round(en_x + 75)) {
+			dir = -1;
+			hsp = patrol_speed * dir;
+		}
+
 		if(distance_to_object(obj_player) < agro_range){
 			state = 2;
 		}
@@ -75,8 +64,10 @@ if(place_meeting(round(x+hsp), round(y), obj_floor)){
 	}
 	hsp = 0;
 }
-x += hsp;
 
+
+
+x += hsp;
 
 if(place_meeting(round(x), round(y + vsp), obj_floor)){
 	while(!place_meeting(round(x), round(y + sign(vsp)), obj_floor)){
@@ -97,7 +88,7 @@ else
 	self.image_xscale=sign(hsp);
 }
 
-//СМЕНА СПРАЙТОВ НА СКОРУЮ НОГУ
+//СМЕНА СПРАЙТОВ НА СКОРУЮ РУКУ
 if (!in_combat) 
 {
 	self.sprite_index=spr_enemy_weak_run
