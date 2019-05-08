@@ -32,7 +32,15 @@ else
 {
 	if abs(speed_h)>0
 	{
-		speed_h-=speed_h*0.4
+		if place_meeting (x, y + 1, obj_floor)
+		{
+			speed_h-=speed_h*0.4	
+		}
+		else
+		{
+			speed_h-=speed_h*0.02	
+		}
+		
 	}
 }
 
@@ -53,7 +61,7 @@ if move_x != 0
 		if key_space && !place_meeting (x, y + 1, obj_floor)
 		{
 			wjumped = true
-			alarm_wjumped = 1
+			alarm_wjumped = room_speed * 0.5
 			speed_v = -jmpspeed
 			speed_h = wjmpspeed * -sign(move_x)
 		}
