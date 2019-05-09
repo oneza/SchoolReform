@@ -12,11 +12,13 @@
         "fa5d65c9-e076-4dab-9cfe-808f72d552d9",
         "99b04dd7-1829-46f9-9435-f1afcb09ab11",
         "d0f34536-7a8e-41ac-9337-f4191c45e8c9",
-        "9912ba45-75ce-4afc-ab12-245e641e1962",
         "2200f20f-b7ca-4c22-85e1-62e4ed79da12",
-        "fdd7872f-9cb4-4a55-a009-b35d21691177",
         "39f1d4b9-173d-4f73-ac2d-a793edee490b",
-        "af2d22be-4936-44cc-8428-47bf1dbd2ea8"
+        "af2d22be-4936-44cc-8428-47bf1dbd2ea8",
+        "297475b2-3992-4ea7-b1ff-961f7dd934a0",
+        "9912ba45-75ce-4afc-ab12-245e641e1962",
+        "fb9d55ba-16a4-49af-89ad-2b2904d36646",
+        "e9770aa4-e271-4cd0-a286-f5d15bf58261"
     ],
     "filterType": "GMSprite",
     "folderName": "school",
