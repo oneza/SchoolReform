@@ -9,9 +9,9 @@ draw_self()
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 534976B3
+/// @DnDDisabled : 1
 /// @DnDArgument : "x" "-15"
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-30"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" "stage"
-draw_text(x + -15, y + -30, string(stage) + "");

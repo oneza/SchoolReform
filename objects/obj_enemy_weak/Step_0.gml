@@ -88,6 +88,12 @@ if(place_meeting(round(x+hsp), round(y), obj_floor)){
 	}
 	hsp = 0;
 }
+if(place_meeting(round(x+hsp), round(y), obj_player)){
+	//while(!place_meeting(round(x + sign(hsp)), round(y), obj_player)){
+	//	x += sign(hsp);
+	//}
+	hsp = 0;
+}
 x += hsp;
 
 
@@ -95,6 +101,12 @@ if(place_meeting(round(x), round(y + vsp), obj_floor)){
 	while(!place_meeting(round(x), round(y + sign(vsp)), obj_floor)){
 		y += sign(vsp);
 	}
+	vsp = 0;
+}
+if(place_meeting(round(x), round(y + vsp), obj_player)){
+	//while(!place_meeting(round(x), round(y + sign(vsp)), obj_player)){
+	//	y += sign(vsp);
+	//}
 	vsp = 0;
 }
 y += vsp;

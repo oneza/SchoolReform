@@ -75,6 +75,14 @@ if !place_meeting (x, y + 1, obj_floor)
         speed_v = speed_v + gravity_value ;
     }
 	
+//СКАТЫВАНИЕ (АХАХАХАХ КАК ЛУРКОПАБ) С ВРАГА
+if place_meeting (x, y + 1, obj_enemy_weak)
+    {
+		nearest_enemy = instance_nearest(x, y, obj_enemy_weak)
+		var dir = sign(nearest_enemy.x - x);
+        speed_h -= dir * 2;
+    }
+	
 //ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
 if place_meeting (x, y + 1, obj_floor) || (abs(speed_h) > 0.5 && place_meeting (x - speed_h, y + 1, obj_floor))
 {
@@ -92,12 +100,24 @@ if place_meeting(x+speed_h, y, obj_floor) {
     }
     speed_h = 0;
 }
+if place_meeting(x+speed_h, y, obj_enemy_weak) {
+    //while !place_meeting(x+sign(speed_h), y, obj_enemy_weak) {
+    //    x += sign(speed_h);
+    //}
+    speed_h = 0;
+}
 x += speed_h;
 //ВЕРТИКАЛЬНАЯ КОЛЛИЗИЯ
 if place_meeting(x, y+speed_v, obj_floor) {
     while !place_meeting(x, y+sign(speed_v), obj_floor) {
         y += sign(speed_v);
     }
+    speed_v = 0;
+}
+if place_meeting(x, y+speed_v, obj_enemy_weak) {
+    //while !place_meeting(x, y+sign(speed_v), obj_enemy_weak) {
+    //    y += sign(speed_v);
+    //}
     speed_v = 0;
 }
 y += speed_v;

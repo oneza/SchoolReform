@@ -38,3 +38,9 @@ if(en_health > 0)
 	/// @DnDArgument : "maxcol" "$FF00FF00"
 	draw_healthbar(x + -30, y + -25, x + +30, y + -20, en_health, $FFFFFFFF & $FFFFFF, $FF0000FF & $FFFFFF, $FF00FF00 & $FFFFFF, 0, (($FFFFFFFF>>24) != 0), (($FFFFFFFF>>24) != 0));
 }
+
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 3D14658F
+/// @DnDDisabled : 1
+/// @DnDArgument : "code" "draw_set_alpha(0.5);$(13_10)draw_rectangle_colour(bbox_left,bbox_top,bbox_right,bbox_bottom,c_red,c_red,c_red,c_red,false);$(13_10)"
