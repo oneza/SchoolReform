@@ -30,8 +30,9 @@ if(l6BA987DD_0)
 	/// @DnDArgument : "y" "ui_placement_y"
 	/// @DnDArgument : "xscale" "0.4"
 	/// @DnDArgument : "yscale" "0.4"
-	/// @DnDArgument : "caption" ""Oleg""
-	draw_text_transformed(ui_placement_x, ui_placement_y, string("Oleg") + "", 0.4, 0.4, 0);
+	/// @DnDArgument : "caption" ""
+	/// @DnDArgument : "text" "global.name"
+	draw_text_transformed(ui_placement_x, ui_placement_y, "" + string(global.name), 0.4, 0.4, 0);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 	/// @DnDVersion : 1
