@@ -1503,6 +1503,14 @@
             }
         },
         {
+            "Key": "e6162870-7564-4d96-862d-938c35a6de2e",
+            "Value": {
+                "id": "37ff3253-6314-4de4-9730-1b69eedb54b5",
+                "resourcePath": "sprites\\spr_drop_collision\\spr_drop_collision.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e61ad3a7-8c2f-485c-a565-8cfab00d28f4",
             "Value": {
                 "id": "f7a08a4f-7070-441c-ae6f-682bd82eba53",

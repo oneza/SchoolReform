@@ -14,4 +14,5 @@ draw_self()
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-30"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" "stage"
+/// @DnDArgument : "caption" "!sliding"
+/// @DnDArgument : "var" "(!sliding)&&(!in_combat)&&(speed_v==0)&&(abs(speed_h) <= 0.7) "

@@ -5,9 +5,13 @@ key_left  = keyboard_check(ord("A"));
 key_up    = keyboard_check(ord("W"));
 //key_shift = keyboard_check(vk_shift);
 	 
-if (!in_combat)&&(speed_v==0)&&(speed_h==0) {self.sprite_index=spr_player_stand}
-if (!in_combat)&&(speed_v > 0) {self.sprite_index=spr_player_fall}
-if (!in_combat)&&(speed_v < 0) {self.sprite_index=spr_player_jump}
+if (!in_combat)
+{
+	if (speed_v==0)&&(speed_h==0) {self.sprite_index=spr_player_stand}
+	if (speed_v > 0) {self.sprite_index=spr_player_fall}
+	if (speed_v < 0) {self.sprite_index=spr_player_jump}
+}
+
 //ГОРИЗОНТАЛЬНЫЕ ДВИЖЕНИЯ	 
 var move_x = (key_right - key_left);
 
@@ -50,7 +54,10 @@ if move_x != 0
 {
 	if place_meeting (x + sign(move_x), y, obj_floor)
     {
-		sliding = true
+		if speed_v != 0
+		{
+			sliding = true
+		}
 		self.sprite_index=spr_player_slide
 		obj_player.image_xscale = sign(move_x)
 		x -= sign(move_x)
@@ -86,7 +93,7 @@ if place_meeting (x, y + 1, obj_enemy_weak)
 //ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
 if place_meeting (x, y + 1, obj_floor) || (abs(speed_h) > 0.5 && place_meeting (x - speed_h, y + 1, obj_floor))
 {
-	if (!in_combat)&&(speed_v==0)&&(speed_h !=0) {self.sprite_index=spr_player_run}
+	if (!in_combat) && (speed_v==0) &&(speed_h !=0) {self.sprite_index=spr_player_run}
 	if key_space
 	{
 		speed_v = -jmpspeed 
@@ -136,6 +143,11 @@ if (!sliding)&&(!in_combat)&&(speed_v==0)&&(abs(speed_h) <= 0.7)
 {
 	self.sprite_index=spr_player_stand
 }
+
+
+
+
+
 
 //Начало боя с obj_enemy_weak в зависмости от дистанции
 if (instance_exists(obj_enemy_weak)) 
