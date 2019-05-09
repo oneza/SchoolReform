@@ -1,4 +1,2 @@
-//if (in_combat) //Бой
-//{
-	performing_attack = false
-//}
+stage = 0
+performing_attack = false

@@ -9,24 +9,16 @@ wjumped = false
 alarm_wjumped = 0
 sliding = false
 
-//wjump=0
-//move_x=0;
-//inert=0;
-//jump=1;
-//spd = 7; //+ key_shift*4;
-//jmpspeed=20;
-//wjmpspeed=10;
-
 
 //Бой (хуй с губой)
 player_hp = 100
 base_damage = 50
 in_combat = false
-qte_in_sequence = 4
-qte_sequence_time_shown = 0.5
-time_for_react = 4
-react_qte_number = 0
-performing_attack = false
+stage = 0
+qte_shown = false
+react_time = 2
+
+
 
 //Бафы
 under_speed_buff = false
