@@ -2,13 +2,14 @@ en_health = 100
 en_x = x;
 en_y = y;
 state = 1//back_patrol = 0 //patrol = 1 //chase = 2
-in_combat = false;
 attack_player = false
 combat_start_range = 43
+alarm_for_attack = 0
+alarm_is_set = false
 vsp = 0;
 hsp = 0;
 dir = -1;
-agro_range = 150;
+agro_range = 300;
 chase_speed = 3.5
 patrol_speed = 2.5
 patrol_range = 150

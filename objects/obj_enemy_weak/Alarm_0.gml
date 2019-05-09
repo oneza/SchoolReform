@@ -1,2 +1,4 @@
-//self.sprite_index=spr_enemy_weak_stand
-attack_player = false
+/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 75BE9E22
+instance_destroy();

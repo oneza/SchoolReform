@@ -1,52 +1,27 @@
 switch(state){
-	case 0: //Возвращение в состояние 1
+	case 0: //Возвращение в начальную позицию
 	{
-		in_combat = false
-			if(x != en_x)
-			{
-				dir = sign(en_x - x);
-				if (abs(x - en_x) > patrol_speed) {
-					hsp = patrol_speed * dir;
-				}
-				else 
-				{
-					hsp = 0
-					x = en_x
-					state = 1
-				}
-			}			
-	}
-	break;
-	case 2: 
-	{
-		dir = sign(obj_player.x - x);
-		hsp = chase_speed * dir;
-		vsp = min(7, vsp + 0.5);
-		if(distance_to_object(obj_player) > agro_range) || place_meeting(round(x + hsp), round(y), obj_floor) 
+		if(x != en_x)
 		{
-			if place_meeting(round(x + hsp), round(y), obj_floor) 
-			{
-				can_agro = false	
-			}
-			state = 0
-		}
-
-		if instance_exists(obj_player) 
-		{
-			if point_distance(x, y, obj_player.x, obj_player.y) < combat_start_range 
-			{
-				hsp = 0; 
-				in_combat = true
+			dir = sign(en_x - x);
+			if (abs(x - en_x) > patrol_speed) {
+				hsp = patrol_speed * dir;
 			}
 			else 
 			{
-				in_combat = false
+				hsp = 0
+				x = en_x
+				state = 1
 			}
+		}	
+		if collision_line(x - agro_range/2, y, x + agro_range/2, y, obj_player, false, true)
+		{
+			state = 2;
 		}
-
 	}
 	break;
-	case 1:
+	
+	case 1://Патрулирует 
 	{
 		can_agro = true
 		switch (patrol_direction) {
@@ -72,6 +47,39 @@ switch(state){
 	}
 	break;
 	
+	case 2://Бежит к игроку
+	{
+		dir = sign(obj_player.x - x);
+		hsp = chase_speed * dir;
+		vsp = min(7, vsp + 0.5);
+		if(distance_to_object(obj_player) > agro_range) || place_meeting(round(x + hsp), round(y), obj_floor) 
+		{
+			if place_meeting(round(x + hsp), round(y), obj_floor) 
+			{
+				can_agro = false	
+			}
+			state = 0
+		}
+
+		if instance_exists(obj_player) 
+		{
+			if point_distance(x, y, obj_player.x, obj_player.y) < combat_start_range 
+			{
+				hsp = 0; 
+				state = 3
+			}
+		}
+
+	}
+	break;	
+	case 3: //Бой
+	{
+		if point_distance(x, y, obj_player.x, obj_player.y) >= combat_start_range 
+		{
+			state = 2
+		}
+	}
+	break;
 }
 
 if(place_meeting(round(x+hsp), round(y), obj_floor)){
@@ -91,38 +99,64 @@ if(place_meeting(round(x), round(y + vsp), obj_floor)){
 }
 y += vsp;
 
-//ПОВОРОТ СПРАЙТА
-if (hsp==0)
-{
-	//self.sprite_index=spr_enemy_weak_stand;
-}
-else
-{
-	//self.sprite_index=spr_enemy_weak_run
-	self.image_xscale=sign(hsp);
-}
+
 
 //СМЕНА СПРАЙТОВ НА СКОРУЮ НОГУ
-if (!in_combat) 
+if state !=4
 {
-	self.sprite_index=spr_enemy_weak_run
-}
-else
-{
-	if attack_player && (alarm[0] == -1)
+	//ПОВОРОТ СПРАЙТА
+	if (hsp==0)
 	{
-		self.sprite_index = spr_enemy_weak_punch
-		alarm[0] = room_speed * 0.5
-		
+		//self.sprite_index=spr_enemy_weak_stand;
 	}
-	if !attack_player
+	else
 	{
-		self.sprite_index=spr_enemy_weak_stand
+		//self.sprite_index=spr_enemy_weak_run
+		self.image_xscale=sign(hsp);
+	}
+	if (state != 3) 
+	{
+		self.sprite_index=spr_enemy_weak_run
+	}
+	else
+	{
+		if (alarm_for_attack == room_speed * 0.5)
+		{
+			self.sprite_index=spr_enemy_weak_punch
+		}
+		if (alarm_for_attack == room_speed * 0.20)
+		{
+			//obj_player.speed_h += 10 * dir
+			obj_player.player_hp -= 25
+		}
+	
+	
+
+		if (alarm_for_attack == 0)
+		{
+			self.sprite_index=spr_enemy_weak_stand
+		}
+		else
+		{
+			alarm_for_attack -= 1
+		}
 	}
 }
+
 
 
 if(en_health <= 0)
 {
-	instance_destroy();
+	self.image_xscale=sign(dir);
+	state = 4
+	hsp -= dir * 15
+	if(place_meeting(round(x+hsp), round(y), obj_floor)){
+		self.sprite_index = spr_explosion
+		if !alarm_is_set
+		{
+			alarm[0] = 24/15 * room_speed	
+			alarm_is_set = true
+		}
+		
+	}
 }
