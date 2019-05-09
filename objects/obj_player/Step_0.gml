@@ -80,7 +80,7 @@ if place_meeting (x, y + 1, obj_enemy_weak)
     {
 		nearest_enemy = instance_nearest(x, y, obj_enemy_weak)
 		var dir = sign(nearest_enemy.x - x);
-        speed_h -= dir * 2;
+        speed_h -= dir * 3;
     }
 	
 //ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
