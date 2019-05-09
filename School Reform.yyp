@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "2200f20f-b7ca-4c22-85e1-62e4ed79da12",
+            "Value": {
+                "id": "c4049971-67e0-4183-bb94-88edc817039b",
+                "resourcePath": "sprites\\spr_scaffold_holder\\spr_scaffold_holder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2223503f-129c-4e2b-89b3-498cefa096e1",
             "Value": {
                 "id": "959991aa-62de-46ac-a90c-f3fe925cbd2c",
@@ -847,6 +855,14 @@
             }
         },
         {
+            "Key": "9912ba45-75ce-4afc-ab12-245e641e1962",
+            "Value": {
+                "id": "9463d30e-cab8-412c-a17d-453c3e33d8f9",
+                "resourcePath": "sprites\\spr_lamp\\spr_lamp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99b04dd7-1829-46f9-9435-f1afcb09ab11",
             "Value": {
                 "id": "5671429c-44a7-41db-a9b8-0d4cad28f6d4",
@@ -939,6 +955,14 @@
             "Value": {
                 "id": "8da52a04-745c-4930-a4a3-7c00ffdd7169",
                 "resourcePath": "objects\\obj_school_platform_0001\\obj_school_platform_0001.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a4915ad8-e360-44a2-ad97-125ebc593f06",
+            "Value": {
+                "id": "d91612b8-c539-4db0-b19c-5c4f1cb726d8",
+                "resourcePath": "objects\\obj_scaffold_holder\\obj_scaffold_holder.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1235,6 +1259,22 @@
             "Value": {
                 "id": "4caed5da-7541-483b-a7e1-b71915542038",
                 "resourcePath": "objects\\obj_damage_buff\\obj_damage_buff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "da83c7f5-cf73-4344-bdac-ec1d9ef61522",
+            "Value": {
+                "id": "a76f8096-37de-45d3-b328-283950f6fa7b",
+                "resourcePath": "rooms\\rm_level_1old\\rm_level_1old.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "db5d0852-bf83-49b8-954f-ed0d3240ac1f",
+            "Value": {
+                "id": "472da2eb-ff6f-490b-8383-492f8159c0ae",
+                "resourcePath": "objects\\obj_lamp\\obj_lamp.yy",
                 "resourceType": "GMObject"
             }
         },
