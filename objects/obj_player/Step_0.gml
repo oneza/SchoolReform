@@ -113,7 +113,7 @@ if place_meeting(x+speed_h, y, obj_enemy_weak) {
     //}
     speed_h = 0;
 }
-x += speed_h;
+
 //ВЕРТИКАЛЬНАЯ КОЛЛИЗИЯ
 if place_meeting(x, y+speed_v, obj_floor) {
     while !place_meeting(x, y+sign(speed_v), obj_floor) {
@@ -127,7 +127,9 @@ if place_meeting(x, y+speed_v, obj_enemy_weak) {
     //}
     speed_v = 0;
 }
+x += speed_h;
 y += speed_v;
+
 
 //МНЕ ЛЕНЬ ДЕЛАТЬ ЕВЕНТ С АЛАРМОМ
 if (alarm_wjumped == 0)

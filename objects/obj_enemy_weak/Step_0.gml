@@ -159,6 +159,7 @@ if state !=4
 
 if(en_health <= 0)
 {
+	obj_player.alarm[9] = -1
 	self.image_xscale=sign(dir);
 	state = 4
 	hsp -= dir * 15
