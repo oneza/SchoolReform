@@ -7,126 +7,127 @@ key_up    = keyboard_check(ord("W"));
 	 
 
 
-//ГОРИЗОНТАЛЬНЫЕ ДВИЖЕНИЯ	 
-var move_x = (key_right - key_left);
 
-
-
-if (move_x != 0)
+if !boss_fight
 {
-	if !wjumped 
+
+	//ГОРИЗОНТАЛЬНЫЕ ДВИЖЕНИЯ	 
+	var move_x = (key_right - key_left);
+
+
+
+	if (move_x != 0)
 	{
-		speed_h += move_x * spd;
-		speed_h = clamp(speed_h, -spd, spd);		
+		if !wjumped 
+		{
+			speed_h += move_x * spd;
+			speed_h = clamp(speed_h, -spd, spd);		
+		}
 	}
-}
-else
-{
-	if abs(speed_h)>0
+	else
 	{
-		if place_meeting (x, y + 1, obj_floor)
+		if abs(speed_h)>0
 		{
-			speed_h-=speed_h*0.4	
-		}
-		else
-		{
-			speed_h-=speed_h*0.02	
-		}
+			if place_meeting (x, y + 1, obj_floor)
+			{
+				speed_h-=speed_h*0.4	
+			}
+			else
+			{
+				speed_h-=speed_h*0.02	
+			}
 		
+		}
 	}
-}
 
-sliding = false
-//СКОЛЬЖЕНИЕ ПО СТЕНЕ
-if move_x != 0 
-{
-	if place_meeting (x + sign(move_x), y, obj_floor)
-    {
-		//if speed_v != 0
-		//{
-			sliding = true
-		//}
-		//self.sprite_index=spr_player_slide
-		//obj_player.image_xscale = sign(move_x)
-		x -= sign(move_x)
-		if speed_v > 0
-		{
-			speed_v -= speed_v/4
-		}
-		if key_space && !place_meeting (x, y + 1, obj_floor)
-		{
-			wjumped = true
-			alarm_wjumped = room_speed * 0.5
-			speed_v = -jmpspeed
-			speed_h = wjmpspeed * -sign(move_x)
-		}
-    }	
-}
-
-standing = false	
-//ПАДЕНИЕ
-if !place_meeting (x, y + 1, obj_floor)
-    {
-        speed_v = speed_v + gravity_value ;
-    }
-else
-{
-	standing = true	
-}
-	
-//СКАТЫВАНИЕ (АХАХАХАХ КАК ЛУРКОПАБ) С ВРАГА
-if place_meeting (x, y + 1, obj_enemy_weak)
-    {
-		nearest_enemy = instance_nearest(x, y, obj_enemy_weak)
-		var dir = sign(nearest_enemy.x - x);
-        speed_h -= dir * 3;
-    }
-	
-//ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
-if place_meeting (x, y + 1, obj_floor) || (abs(speed_h) > 0.5 && place_meeting (x - speed_h, y + 1, obj_floor))
-{
-	//if (!in_combat) && (speed_v==0) &&(speed_h !=0) {self.sprite_index=spr_player_run}
-	if key_space
+	sliding = false
+	//СКОЛЬЖЕНИЕ ПО СТЕНЕ
+	if move_x != 0 
 	{
-		speed_v = -jmpspeed 
-	}   
+		if place_meeting (x + sign(move_x), y, obj_floor)
+	    {
+			//if speed_v != 0
+			//{
+				sliding = true
+			//}
+			//self.sprite_index=spr_player_slide
+			//obj_player.image_xscale = sign(move_x)
+			x -= sign(move_x)
+			if speed_v > 0
+			{
+				speed_v -= speed_v/4
+			}
+			if key_space && !place_meeting (x, y + 1, obj_floor)
+			{
+				wjumped = true
+				alarm_wjumped = room_speed * 0.5
+				speed_v = -jmpspeed
+				speed_h = wjmpspeed * -sign(move_x)
+			}
+	    }	
+	}
+
+	standing = false	
+	//ПАДЕНИЕ
+	if !place_meeting (x, y + 1, obj_floor)
+	    {
+	        speed_v = speed_v + gravity_value ;
+	    }
+	else
+	{
+		standing = true	
+	}
+	
+	//СКАТЫВАНИЕ (АХАХАХАХ КАК ЛУРКОПАБ) С ВРАГА
+	if place_meeting (x, y + 1, obj_enemy_weak)
+	    {
+			nearest_enemy = instance_nearest(x, y, obj_enemy_weak)
+			var dir = sign(nearest_enemy.x - x);
+	        speed_h -= dir * 3;
+	    }
+	
+	//ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
+	if place_meeting (x, y + 1, obj_floor) || (abs(speed_h) > 0.5 && place_meeting (x - speed_h, y + 1, obj_floor))
+	{
+		//if (!in_combat) && (speed_v==0) &&(speed_h !=0) {self.sprite_index=spr_player_run}
+		if key_space
+		{
+			speed_v = -jmpspeed 
+		}   
+	}
+
+	//ГОРИЗОНТАЛЬНАЯ КОЛЛИЗИЯ
+	if place_meeting(x+speed_h, y, obj_floor) {
+	    while !place_meeting(x+sign(speed_h), y, obj_floor) {
+	        x += sign(speed_h);
+	    }
+	    speed_h = 0;
+	}
+	if place_meeting(x+speed_h, y, obj_enemy_weak) {
+	    //while !place_meeting(x+sign(speed_h), y, obj_enemy_weak) {
+	    //    x += sign(speed_h);
+	    //}
+	    speed_h = 0;
+	}
+
+	//ВЕРТИКАЛЬНАЯ КОЛЛИЗИЯ
+	if place_meeting(x, y+speed_v, obj_floor) {
+	    while !place_meeting(x, y+sign(speed_v), obj_floor) {
+	        y += sign(speed_v);
+	    }
+	    speed_v = 0;
+	}
+	if place_meeting(x, y+speed_v, obj_enemy_weak) {
+	    //while !place_meeting(x, y+sign(speed_v), obj_enemy_weak) {
+	    //    y += sign(speed_v);
+	    //}
+	    speed_v = 0;
+	}
+	x += speed_h;
+	y += speed_v;
 }
 
-//ГОРИЗОНТАЛЬНАЯ КОЛЛИЗИЯ
-if place_meeting(x+speed_h, y, obj_floor) {
-    while !place_meeting(x+sign(speed_h), y, obj_floor) {
-        x += sign(speed_h);
-    }
-    speed_h = 0;
-}
-if place_meeting(x+speed_h, y, obj_enemy_weak) {
-    //while !place_meeting(x+sign(speed_h), y, obj_enemy_weak) {
-    //    x += sign(speed_h);
-    //}
-    speed_h = 0;
-}
 
-//ВЕРТИКАЛЬНАЯ КОЛЛИЗИЯ
-if place_meeting(x, y+speed_v, obj_floor) {
-    while !place_meeting(x, y+sign(speed_v), obj_floor) {
-        y += sign(speed_v);
-    }
-    speed_v = 0;
-}
-if place_meeting(x, y+speed_v, obj_enemy_weak) {
-    //while !place_meeting(x, y+sign(speed_v), obj_enemy_weak) {
-    //    y += sign(speed_v);
-    //}
-    speed_v = 0;
-}
-
-//if boss_fight
-//{
-//	speed_h = 0	
-//}
-
-x += speed_h;
-y += speed_v;
 
 
 //МНЕ ЛЕНЬ ДЕЛАТЬ ЕВЕНТ С АЛАРМОМ

@@ -1,23 +1,21 @@
-/// @DnDAction : YoYo Games.Drawing.Draw_Self
-/// @DnDVersion : 1
-/// @DnDHash : 3741CB5E
 draw_self();
-
-/// @DnDAction : YoYo Games.Common.If_Variable
-/// @DnDVersion : 1
-/// @DnDHash : 5C90A05C
-/// @DnDArgument : "var" "self.sprite_index"
-/// @DnDArgument : "value" "spr_boss_otjimania"
-if(self.sprite_index == spr_boss_otjimania)
+if (instance_exists(obj_player)) 
+{ 
+	var nearest_player = instance_nearest(x, y, obj_player)
+	if nearest_player.is_challenging
+	{
+		otjatia_int = round(otjatia);
+		draw_text(x + 0, y + -40,  + string(otjatia_int));
+		draw_sprite(spr_qte_down, 0, nearest_player.x - 40, nearest_player.y - 50);
+		draw_text(nearest_player.x - 12, nearest_player.y + 5 ,  + string(nearest_player.otjatia));
+	
+	}
+}
+if defeated
 {
-	/// @DnDAction : YoYo Games.Drawing.Draw_Value
-	/// @DnDVersion : 1
-	/// @DnDHash : 0ED92AD0
-	/// @DnDParent : 5C90A05C
-	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "-40"
-	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "caption" ""
-	/// @DnDArgument : "var" "otjatia"
-	draw_text(x + 0, y + -40,  + string(otjatia));
+	draw_text(x + -50, y + -60, string("YOU WON "))
+}
+if won
+{
+	draw_text(x + -50, y + -60, string("YOU LOOSE "))
 }

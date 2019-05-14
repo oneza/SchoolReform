@@ -18,7 +18,11 @@ in_combat = false
 stage = 0
 qte_shown = false
 react_time = 2
+
+//Босс 1
 boss_fight = false
+is_challenging = false
+otjatia = 0
 
 
 
