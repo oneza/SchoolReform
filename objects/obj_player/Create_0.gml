@@ -8,6 +8,7 @@ spd = 7
 wjumped = false
 alarm_wjumped = 0
 sliding = false
+standing = false
 
 
 //Бой (хуй с губой)
@@ -17,6 +18,7 @@ in_combat = false
 stage = 0
 qte_shown = false
 react_time = 2
+boss_fight = false
 
 
 

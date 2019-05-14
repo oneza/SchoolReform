@@ -5,26 +5,14 @@ key_left  = keyboard_check(ord("A"));
 key_up    = keyboard_check(ord("W"));
 //key_shift = keyboard_check(vk_shift);
 	 
-if (!in_combat)
-{
-	if (speed_v==0)&&(speed_h==0) {self.sprite_index=spr_player_stand}
-	if (speed_v > 0) {self.sprite_index=spr_player_fall}
-	if (speed_v < 0) {self.sprite_index=spr_player_jump}
-}
+
 
 //ГОРИЗОНТАЛЬНЫЕ ДВИЖЕНИЯ	 
 var move_x = (key_right - key_left);
 
-if (speed_h > 0.5)
-{
-	obj_player.image_xscale=1
-}
-if (speed_h < -0.5)
-{
-	obj_player.image_xscale=-1
-}
 
-if (move_x != 0) 
+
+if (move_x != 0)
 {
 	if !wjumped 
 	{
@@ -50,16 +38,16 @@ else
 
 sliding = false
 //СКОЛЬЖЕНИЕ ПО СТЕНЕ
-if move_x != 0
+if move_x != 0 
 {
 	if place_meeting (x + sign(move_x), y, obj_floor)
     {
-		if speed_v != 0
-		{
+		//if speed_v != 0
+		//{
 			sliding = true
-		}
-		self.sprite_index=spr_player_slide
-		obj_player.image_xscale = sign(move_x)
+		//}
+		//self.sprite_index=spr_player_slide
+		//obj_player.image_xscale = sign(move_x)
 		x -= sign(move_x)
 		if speed_v > 0
 		{
@@ -75,12 +63,16 @@ if move_x != 0
     }	
 }
 
-
+standing = false	
 //ПАДЕНИЕ
 if !place_meeting (x, y + 1, obj_floor)
     {
         speed_v = speed_v + gravity_value ;
     }
+else
+{
+	standing = true	
+}
 	
 //СКАТЫВАНИЕ (АХАХАХАХ КАК ЛУРКОПАБ) С ВРАГА
 if place_meeting (x, y + 1, obj_enemy_weak)
@@ -93,7 +85,7 @@ if place_meeting (x, y + 1, obj_enemy_weak)
 //ПРЫЖОК С ЗЕМЛИ И НЕ ТОЛЬКО
 if place_meeting (x, y + 1, obj_floor) || (abs(speed_h) > 0.5 && place_meeting (x - speed_h, y + 1, obj_floor))
 {
-	if (!in_combat) && (speed_v==0) &&(speed_h !=0) {self.sprite_index=spr_player_run}
+	//if (!in_combat) && (speed_v==0) &&(speed_h !=0) {self.sprite_index=spr_player_run}
 	if key_space
 	{
 		speed_v = -jmpspeed 
@@ -127,6 +119,12 @@ if place_meeting(x, y+speed_v, obj_enemy_weak) {
     //}
     speed_v = 0;
 }
+
+//if boss_fight
+//{
+//	speed_h = 0	
+//}
+
 x += speed_h;
 y += speed_v;
 
@@ -141,11 +139,32 @@ else
 	alarm_wjumped -= 1
 }
 
-if (!sliding)&&(!in_combat)&&(speed_v==0)&&(abs(speed_h) <= 0.7) 
+
+if (!in_combat && !boss_fight)
 {
-	self.sprite_index=spr_player_stand
+	
+	if (speed_v > 0) {self.sprite_index=spr_player_fall}
+	if (speed_v < 0) {self.sprite_index=spr_player_jump}
+	if (sliding && !standing) {		
+		self.sprite_index=spr_player_slide
+		obj_player.image_xscale = sign(move_x)
+	}
+	if standing && (speed_v==0)
+	{
+		if (abs(speed_h) <= 0.7)  {self.sprite_index=spr_player_stand}	
+		if (abs(speed_h) > 0.7) {self.sprite_index=spr_player_run}	
+	}
 }
 
+
+if (speed_h > 0.5)
+{
+	obj_player.image_xscale=1
+}
+if (speed_h < -0.5)
+{
+	obj_player.image_xscale=-1
+}
 
 
 
