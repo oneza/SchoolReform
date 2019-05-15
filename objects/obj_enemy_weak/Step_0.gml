@@ -177,12 +177,13 @@ if(en_health <= 0)
 	state = 4
 	hsp -= dir * 15
 	if(place_meeting(round(x+hsp), round(y), obj_floor)){
-		self.sprite_index = spr_explosion
-		if !alarm_is_set
-		{
-			alarm[0] = 24/15 * room_speed	
-			alarm_is_set = true
-		}
+		instance_create_layer(x, y, "Instances_active", obj_explosion)
+		instance_destroy()
+		//if !alarm_is_set
+		//{
+		//	alarm[0] = 24/15 * room_speed	
+		//	alarm_is_set = true
+		//}
 		
 	}
 }

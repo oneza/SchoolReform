@@ -34,7 +34,7 @@ speed_buff_duration = 5
 under_damage_buff = false
 damage_buff_duration = 7
 
-showInv = true;
-for(i = 0; i < maxItems; i++){
-	global.inventory[i] = -1;
-}
+//showInv = true;
+//for(i = 0; i < maxItems; i++){
+//	global.inventory[i] = -1;
+//}
