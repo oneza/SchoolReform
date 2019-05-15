@@ -15,5 +15,6 @@ if(showInv == true){
 
 if keyboard_check(ord("E")) && !locked
 {
+	global.player_hp = obj_player.player_hp
 	room_goto(destination);
 }

@@ -26,9 +26,9 @@ draw_self()
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 40DF0D90
+/// @DnDDisabled : 1
 /// @DnDArgument : "x" "-15"
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-30"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" "obj_firstboss.try"
-draw_text(x + -15, y + -30, string(obj_firstboss.try) + "");
