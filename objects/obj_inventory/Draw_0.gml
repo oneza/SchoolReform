@@ -17,7 +17,7 @@ if(showInv == true && room != rm_death&& room != rm_start){
 	for(i = 0; i < maxItems; i++){
 		draw_sprite(spr_border, 0, x1 + (i * 50), y1 );
 		if(global.inventory[i] != -1){
-			draw_sprite(spr_itemcommon, global.inventory[i], x1 + (i * 50) + 15, y1 + 5);
+			draw_sprite_ext(spr_itemcommon, global.inventory[i], x1 + (i * 50) + 15, y1 + 5, 0.66, 0.66, 0, c_white, 1);
 		}
 	}
 }

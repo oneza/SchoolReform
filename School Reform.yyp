@@ -31,11 +31,27 @@
     },
     "resources": [
         {
+            "Key": "027a6346-d692-47ba-b579-696df9e078be",
+            "Value": {
+                "id": "a6f0fe6c-57a2-4a56-976c-1b39a0bf6b1e",
+                "resourcePath": "objects\\obj_dildo\\obj_dildo.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "03c7def7-a4a3-498d-aa0f-3d8703795812",
             "Value": {
                 "id": "e990e369-6de8-4513-a849-aa6e01b39548",
                 "resourcePath": "views\\8c592997-a1ed-4111-9f5d-2614cfc5ce6d-room.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "05867da4-31d9-489b-8c64-82c325cba13b",
+            "Value": {
+                "id": "e7079e4e-3ef1-4052-8371-808686466404",
+                "resourcePath": "sprites\\spr_baseball_bat\\spr_baseball_bat.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -388,6 +404,14 @@
                 "id": "5e657340-767e-4dc5-a2aa-d37ee961b922",
                 "resourcePath": "sprites\\spr_sch_block\\spr_sch_block.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3f66f8c5-92b8-4dee-a0df-d91838817084",
+            "Value": {
+                "id": "adcec5a1-78fd-48c4-a8c5-53a96d872e03",
+                "resourcePath": "objects\\obj_baseballbat\\obj_baseballbat.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -871,6 +895,14 @@
             }
         },
         {
+            "Key": "81c9a434-87b7-4160-ae1b-232e30be7ad1",
+            "Value": {
+                "id": "50ecb86a-487c-445f-8804-e87222fccece",
+                "resourcePath": "sprites\\spr_qte_e\\spr_qte_e.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "830f2b0e-4569-419d-9077-5549d6acd814",
             "Value": {
                 "id": "9fd77fbe-269f-4156-910e-341cc109cb39",
@@ -1004,6 +1036,14 @@
                 "id": "614dd79a-58cd-41e2-a063-10f70a373b1f",
                 "resourcePath": "scripts\\scr_loadgame\\scr_loadgame.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9c87c91a-fe6a-4364-b8d8-8bd8ee108e3a",
+            "Value": {
+                "id": "76d468be-f1aa-40d8-afcc-d5041065c8db",
+                "resourcePath": "sprites\\spr_schself_close\\spr_schself_close.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1226,7 +1266,7 @@
             "Key": "c21c4134-b026-47db-bbc5-2414bd3d3462",
             "Value": {
                 "id": "75d3f6f8-fe5e-49ed-bdab-be7f41dedb55",
-                "resourcePath": "sprites\\spr_schself\\spr_schself.yy",
+                "resourcePath": "sprites\\spr_schself_open\\spr_schself_open.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1603,6 +1643,14 @@
             "Value": {
                 "id": "34517d13-dd30-4efb-a2b7-f1a3c3efd5b3",
                 "resourcePath": "sprites\\spr_lvldoor1\\spr_lvldoor1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f39c7e1a-2288-4e70-aba4-e2ee6de09f5f",
+            "Value": {
+                "id": "d7a88fcc-7828-4cfb-b98c-da4922c69917",
+                "resourcePath": "sprites\\spr_dildo\\spr_dildo.yy",
                 "resourceType": "GMSprite"
             }
         },

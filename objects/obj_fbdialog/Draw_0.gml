@@ -11,7 +11,7 @@ switch (obj_firstboss.counter)
 				draw_set_color(c_white);
 				draw_roundrect(boss_x - dir * 25 , obj_player.y-30, boss_x - dir * 150, obj_player.y,false);
 				draw_set_color(c_black);
-				draw_roundrect(670, 450, 730, 795, true);
+				//draw_roundrect(670, 450, 730, 795, true);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_top);
 				draw_text_ext_transformed(boss_x - dir * 30, 
@@ -33,7 +33,7 @@ switch (obj_firstboss.counter)
 				draw_set_color(c_white);
 				draw_roundrect(obj_player.x + dir * 150, obj_player.y - 30, obj_player.x + dir * 25, obj_player.y,false);
 				draw_set_color(c_black);
-				draw_roundrect(670, 450, 730, 795, true);
+				//draw_roundrect(670, 450, 730, 795, true);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_top);
 								draw_text_ext_transformed(obj_player.x + dir * 145, 
@@ -55,7 +55,7 @@ switch (obj_firstboss.counter)
 				dir = sign(obj_player.x - obj_firstboss.x);
 				draw_roundrect(boss_x - dir * 25 , obj_player.y-30, boss_x - dir * 150, obj_player.y,false);
 				draw_set_color(c_black);
-				draw_roundrect(670, 450, 730, 795, true);
+				//draw_roundrect(670, 450, 730, 795, true);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_top);
 				draw_text_ext_transformed(boss_x - dir * 30, 

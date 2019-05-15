@@ -177,6 +177,8 @@ if (instance_exists(obj_enemy_weak))
 	nearest_enemy = instance_nearest(x, y, obj_enemy_weak)
 	if (point_distance(x, y, nearest_enemy.x, nearest_enemy.y) < nearest_enemy.combat_start_range) && nearest_enemy.sprite_index != spr_explosion
 	{
+		var dir = sign(obj_enemy_weak.x - x)
+		//obj_player.image_xscale=dir
 		in_combat = true
 	}
 	else

@@ -14,12 +14,12 @@ immun = false
 //Бой (хуй с губой)
 player_hp = 100
 base_damage = 33
-crit_chance = 100
+crit_chance = 10
 crit_multiplier = 2
 in_combat = false
 stage = 0
 qte_shown = false
-react_time = 2
+react_time = 1.5
 
 //Босс 1
 boss_fight = false
