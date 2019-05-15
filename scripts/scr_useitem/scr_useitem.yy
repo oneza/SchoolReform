@@ -1,8 +1,8 @@
 {
-    "id": "48892a9a-ce56-4169-900a-dbb5376fd7b2",
+    "id": "47187980-c371-4cc4-b140-86a906cc614c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_itemdrop",
+    "name": "scr_useitem",
     "IsCompatibility": false,
     "IsDnD": false
 }

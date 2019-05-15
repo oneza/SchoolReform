@@ -1,4 +1,4 @@
-if scr_itempickup(0)
+if scr_itempickup(2)
 {
 	instance_destroy(other)	
 }

@@ -1,8 +1,8 @@
 {
-    "id": "d9f7d7f5-95e1-4331-abb4-e4b30086afd5",
+    "id": "f7a916f6-494e-4f80-8f06-2217ff8bce3a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_damage_buff",
+    "name": "obj_hp_restore",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "896abd0f-3cbc-423d-87b1-39f00e05d654",
+    "spriteId": "2837a4f4-f279-439a-a1d0-d3fe83a90c22",
     "visible": true
 }
