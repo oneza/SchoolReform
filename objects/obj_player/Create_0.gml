@@ -9,7 +9,7 @@ wjumped = false
 alarm_wjumped = 0
 sliding = false
 standing = false
-
+immun = false
 
 //Бой (хуй с губой)
 player_hp = 100
