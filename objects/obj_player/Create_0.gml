@@ -13,7 +13,9 @@ immun = false
 
 //Бой (хуй с губой)
 player_hp = 100
-base_damage = 50
+base_damage = 33
+crit_chance = 100
+crit_multiplier = 2
 in_combat = false
 stage = 0
 qte_shown = false

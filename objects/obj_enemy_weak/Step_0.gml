@@ -138,8 +138,21 @@ if state !=4
 		}
 		if (alarm_for_attack == room_speed * 0.20)
 		{
+			damage = irandom_range(base_damage - 0.25* base_damage, base_damage + 0.25 * base_damage)
+			var crit = false
+			randomize()
+			if irandom(99) < crit_chance
+			{
+				var crit = true
+				damage = damage * crit_multiplier
+			}
+
 			//obj_player.speed_h += 10 * dir
-			obj_player.player_hp -= 25
+			obj_player.player_hp -= damage
+			var damage_display = instance_create_layer(obj_player.x, obj_player.y - 20, "UI", obj_damage_text)
+			damage_display.damage_dealer = 1
+			damage_display.damage_value = damage
+			damage_display.crit = crit
 		}
 	
 	

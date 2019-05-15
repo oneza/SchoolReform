@@ -14,6 +14,9 @@ chase_speed = 3.5
 patrol_speed = 2.5
 patrol_range = 150
 //idle вражина с нулевой скоростью по дефолту
+base_damage = 25
+crit_chance = 25
+crit_multiplier = 2
 randomize();
 patrol_random = floor(random_range(0, 1 + 1));
 patrol_direction = -1 + 2 * patrol_random

@@ -193,9 +193,21 @@ if (in_combat)
 	qte_placing_x = x - 30 + (nearest_enemy.x - x) / 2
 	if alarm[8] == 0.2 * room_speed
 	{
+		damage = irandom_range(base_damage - 0.25* base_damage, base_damage + 0.25 * base_damage)
+		var crit = false
+		randomize()
+		if irandom(99) < crit_chance
+		{
+			var crit = true
+			damage = damage * crit_multiplier
+		}
 		var dir = sign(nearest_enemy.x - x);
 		nearest_enemy.hsp += dir * 10
-		nearest_enemy.en_health -= base_damage
+		nearest_enemy.en_health -= damage
+		var damage_display = instance_create_layer(nearest_enemy.x, nearest_enemy.y - 20, "UI", obj_damage_text)
+		damage_display.damage_dealer = 0
+		damage_display.damage_value = damage
+		damage_display.crit = crit
 	}
 	if stage == 0
 	{
