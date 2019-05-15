@@ -20,12 +20,17 @@ if(showInv == true){
 	    case 3:
 	        base_damage += 10
 			crit_chance -= 50
+			scr_placeitem(argument0)
 	        break;
 	    case 4:
 			base_damage -= 30
 			crit_chance += 20
-	        break;
-	    default:
+			scr_placeitem(argument0)
+			break;
+	    case 5:
+			scr_placeitem(argument0)
+			break;
+		default:
 	        // Добавить звук закрытой двери из второй халфы
 	        break;
 	}

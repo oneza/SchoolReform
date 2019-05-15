@@ -1,0 +1,1 @@
+lootable = true

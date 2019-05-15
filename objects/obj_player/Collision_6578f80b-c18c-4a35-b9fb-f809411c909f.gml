@@ -1,6 +1,9 @@
-if scr_itempickup(3)
+if other.lootable
 {
-	base_damage -= 10
-	crit_chance += 50
-	instance_destroy(other)	
+	if scr_itempickup(3)
+	{
+		base_damage -= 10
+		crit_chance += 50
+		instance_destroy(other)	
+}	
 }
