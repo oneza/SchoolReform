@@ -23,6 +23,15 @@ draw_self()
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" "obj_fbdialog.dialog"
 
+/// @DnDAction : YoYo Games.Types.Decimal_To_Integer
+/// @DnDVersion : 1
+/// @DnDHash : 66353961
+/// @DnDDisabled : 1
+/// @DnDArgument : "var" "dsds"
+/// @DnDArgument : "r" "2"
+/// @DnDArgument : "n" "image_index"
+
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 40DF0D90
@@ -31,4 +40,4 @@ draw_self()
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-30"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" "obj_firstboss.try"
+/// @DnDArgument : "caption" "speed_v"

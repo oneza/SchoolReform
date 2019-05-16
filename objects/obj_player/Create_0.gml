@@ -10,11 +10,12 @@ alarm_wjumped = 0
 sliding = false
 standing = false
 immun = false
+random_walking_sound = false
 
 //Бой (хуй с губой)
 player_hp = 100
 base_damage = 33
-crit_chance = 10
+crit_chance = 20
 crit_multiplier = 2
 in_combat = false
 stage = 0

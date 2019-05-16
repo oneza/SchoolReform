@@ -1,6 +1,8 @@
 y += 90
 if (instance_exists(obj_player)) 
 { 
+	audio_pause_all()
+	audio_resume_sound(snd_gymambient)
 	sprite_index = spr_firstboss
 	var nearest_player = instance_nearest(x, y, obj_player)
 	nearest_player.is_challenging = false

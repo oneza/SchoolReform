@@ -1,7 +1,8 @@
+draw_sprite_ext(spr_qte_e, 0, x - 15, y - 35, 0.4, 0.4, 0, c_white, 1)
 draw_set_font(fn_tnr);
 draw_set_color(c_white);
 //if(abs(obj_player.x - obj_firstboss.x) <= 300 && abs(obj_player.y - obj_firstboss.y) <= 50){
-switch (obj_firstboss.counter)
+switch (obj_firstboss.try)
 {
 	case 0:
 	{

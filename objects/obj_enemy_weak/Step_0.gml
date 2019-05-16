@@ -138,6 +138,7 @@ if state !=4
 		}
 		if (alarm_for_attack == room_speed * 0.20)
 		{
+			audio_play_sound(eff_punch, 1, false)
 			damage = irandom_range(base_damage - 0.25* base_damage, base_damage + 0.25 * base_damage)
 			var crit = false
 			randomize()

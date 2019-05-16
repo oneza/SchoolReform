@@ -16,5 +16,7 @@ if(showInv == true){
 if keyboard_check(ord("E")) && !locked
 {
 	global.player_hp = obj_player.player_hp
+	global.base_damage = obj_player.base_damage
+	global.crit_chance = obj_player.crit_chance
 	room_goto(destination);
 }

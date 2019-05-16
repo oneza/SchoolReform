@@ -25,6 +25,15 @@ if (instance_exists(obj_player))
 	}
 	if !nearest_player.is_challenging && start_fight
 	{
+		audio_pause_all()
+		if try == 0
+		{
+			audio_play_sound(snd_firtstbossfight, 1, false)	
+		}
+		else
+		{
+			audio_resume_sound(snd_firtstbossfight)	
+		}
 		start_fight = false
 		nearest_player.is_challenging = true
 		nearest_player.sprite_index=spr_player_otjimania

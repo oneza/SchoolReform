@@ -11,11 +11,13 @@ if (instance_exists(obj_player))
 	
 	}
 }
+draw_set_halign(fa_middle);
+draw_set_valign(fa_top);
 if defeated
 {
-	draw_text(x + -50, y + -60, string("YOU WON "))
+	draw_text(x, y - 200, string("YOU WON "))
 }
 if won
 {
-	draw_text(x + -50, y + -60, string("YOU LOOSE "))
+	draw_text(x, y - 200, string("YOU LOOSE "))
 }

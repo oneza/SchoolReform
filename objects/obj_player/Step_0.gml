@@ -115,6 +115,10 @@ if !boss_fight
 	    while !place_meeting(x, y+sign(speed_v), obj_floor) {
 	        y += sign(speed_v);
 	    }
+		if speed_v > 15
+		{
+			audio_play_sound(eff_landing, 1, false)	
+		}
 	    speed_v = 0;
 	}
 	if place_meeting(x, y+speed_v, obj_enemy_weak) {
@@ -195,6 +199,7 @@ if (in_combat)
 	qte_placing_x = x - 30 + (nearest_enemy.x - x) / 2
 	if alarm[8] == 0.2 * room_speed
 	{
+		audio_play_sound(eff_punch, 1, false)
 		damage = irandom_range(base_damage - 0.25* base_damage, base_damage + 0.25 * base_damage)
 		var crit = false
 		randomize()

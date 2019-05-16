@@ -1,5 +1,6 @@
 if !opened && player_can_open
 {
+	audio_play_sound(eff_lockerhit, 0, false)
 	opened = true
 	if loot != 0
 	{
