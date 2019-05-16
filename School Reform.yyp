@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "22788588-1fff-4739-ad81-8fe189d6478a",
+            "Value": {
+                "id": "7e3837ed-988d-46af-a933-6c804619e6b6",
+                "resourcePath": "sprites\\spr_firstboss_hit\\spr_firstboss_hit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "24dfe9eb-f190-4801-a649-bcdee80789f9",
             "Value": {
                 "id": "6850509d-b05e-4ab6-85bd-cffdcf0b654c",

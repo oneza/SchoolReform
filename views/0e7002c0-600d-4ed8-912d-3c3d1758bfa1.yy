@@ -6,7 +6,8 @@
     "children": [
         "e2b69aed-8778-44a7-a570-d42e6c4927b5",
         "772ca792-8e75-401c-b624-007d32dcd55e",
-        "adccf756-2d14-4d66-b44e-6d4f893af759"
+        "adccf756-2d14-4d66-b44e-6d4f893af759",
+        "22788588-1fff-4739-ad81-8fe189d6478a"
     ],
     "filterType": "GMSprite",
     "folderName": "firstboss",
