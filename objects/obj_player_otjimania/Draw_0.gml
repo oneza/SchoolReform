@@ -21,7 +21,7 @@ if(timer <= 0)
 	
 		obj_firstboss.sprite_index=spr_firstboss;
 		obj_firstboss.otjatia=0;
-		obj_firstboss.y+=80
+		//obj_firstboss.y+=80
 		instance_activate_object(obj_player);
 		obj_player.x-=20
 	

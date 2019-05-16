@@ -18,7 +18,8 @@
         "297475b2-3992-4ea7-b1ff-961f7dd934a0",
         "9912ba45-75ce-4afc-ab12-245e641e1962",
         "fb9d55ba-16a4-49af-89ad-2b2904d36646",
-        "e9770aa4-e271-4cd0-a286-f5d15bf58261"
+        "e9770aa4-e271-4cd0-a286-f5d15bf58261",
+        "34b70890-a010-444f-9290-622b2cf3f529"
     ],
     "filterType": "GMSprite",
     "folderName": "school",

@@ -1,4 +1,4 @@
-y += 90
+//y += 90
 if (instance_exists(obj_player)) 
 { 
 	audio_pause_all()

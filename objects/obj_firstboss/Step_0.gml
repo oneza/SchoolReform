@@ -39,7 +39,7 @@ if (instance_exists(obj_player))
 		nearest_player.sprite_index=spr_player_otjimania
 		nearest_player.image_speed = 0
 		sprite_index = spr_boss_otjimania
-		y-=90
+		//y-=90
 		alarm[0] = timer * room_speed
 	}
 	if nearest_player.is_challenging
