@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "62ff35cd-4e8c-44df-ac24-656e59e2e486",
+            "Value": {
+                "id": "05a354b9-25bd-4982-9ed6-68961adecd21",
+                "resourcePath": "sprites\\spr_enemy_weak_pain\\spr_enemy_weak_pain.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "63e6f3e9-99de-4f3f-9a06-4f1c3894ae52",
             "Value": {
                 "id": "9750cc82-e672-41e5-9438-969ba6b84632",
@@ -1322,7 +1330,7 @@
             "Key": "adccf756-2d14-4d66-b44e-6d4f893af759",
             "Value": {
                 "id": "49d74b82-6208-442c-8718-240f9698a930",
-                "resourcePath": "sprites\\sprite36\\sprite36.yy",
+                "resourcePath": "sprites\\spr_beated\\spr_beated.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1631,6 +1639,14 @@
             }
         },
         {
+            "Key": "de17127d-2366-49a8-b730-0d98af1c09d2",
+            "Value": {
+                "id": "4194d374-86a2-473e-9a73-d6cb1301fe59",
+                "resourcePath": "sprites\\spr_player_pain\\spr_player_pain.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "deab7053-dc97-4bb0-b774-5fb814b60a5e",
             "Value": {
                 "id": "e6796f6f-35ac-47df-a383-8d818acb762a",
@@ -1851,14 +1867,6 @@
             "Value": {
                 "id": "f8d75ece-e722-4e19-a9a3-3b23be6999ce",
                 "resourcePath": "sprites\\tutor\\tutor.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "f71946c4-674c-4603-a786-5102f055d5c6",
-            "Value": {
-                "id": "f84bb9df-bc5c-41a1-a778-e230aec9eda2",
-                "resourcePath": "sprites\\spr_\\spr_.yy",
                 "resourceType": "GMSprite"
             }
         },
