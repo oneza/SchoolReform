@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "3b908c2e-5e70-4bbe-b335-8d95434e7f28",
+            "Value": {
+                "id": "ef79efd6-b630-4155-82fc-0b94413d56e3",
+                "resourcePath": "sounds\\snd_schoolambient1\\snd_schoolambient1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "3cc971d9-b651-41db-b43b-ee3cfdd83249",
             "Value": {
                 "id": "2b6e37ca-9e49-4b1f-af78-df854c7a149a",
@@ -636,6 +644,14 @@
                 "id": "6bab4db2-4813-439b-82ce-ec1218f5d7cf",
                 "resourcePath": "views\\4ec5eff8-ebbc-4681-8268-658dcb339a2f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4f03ac45-aec0-4ef5-b426-5252e700e379",
+            "Value": {
+                "id": "09df5d62-d28f-400f-a457-52b859c2cf59",
+                "resourcePath": "sounds\\eff_punch1\\eff_punch1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
