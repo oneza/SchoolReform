@@ -158,7 +158,10 @@ if state !=4
 			damage_display.damage_value = damage
 			damage_display.crit = crit
 		}
-	
+		if (alarm_for_attack == 1)
+		{
+			obj_player.sprite_index=spr_player_fightpose;
+		}
 	
 
 		if (alarm_for_attack == 0)
