@@ -3,7 +3,7 @@ if (instance_exists(obj_player))
 { 
 	audio_pause_all()
 	audio_resume_sound(snd_gymambient)
-	sprite_index = spr_firstboss
+	
 	var nearest_player = instance_nearest(x, y, obj_player)
 	nearest_player.is_challenging = false
 	nearest_player.image_speed = 1
@@ -15,6 +15,8 @@ if (instance_exists(obj_player))
 	{
 		defeated = true
 		instance_create_layer(nearest_player.x, nearest_player.y, "Instances_active", obj_key)	
+		self.sprite_index = spr_beated
+		//sprite_index = spr_firstboss
 	}
 	else
 	{
@@ -22,7 +24,8 @@ if (instance_exists(obj_player))
 		nearest_player.speed_h = -100
 		nearest_player.speed_v = -50
 		won = true
-		alarm[1] = room_speed * 2
+		alarm[1] = room_speed * 0.5
+		self.sprite_index = spr_firstboss_hit
 	}
 	
 }

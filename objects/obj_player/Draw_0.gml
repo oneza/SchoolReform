@@ -36,8 +36,8 @@ draw_self()
 /// @DnDVersion : 1
 /// @DnDHash : 40DF0D90
 /// @DnDDisabled : 1
-/// @DnDArgument : "x" "-15"
+/// @DnDArgument : "x" "-40"
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-30"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" "speed_v"
+/// @DnDArgument : "caption" "view_enabled[0]"

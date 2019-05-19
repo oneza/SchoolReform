@@ -7,3 +7,4 @@ won = false
 dialog_spawned = false
 try = -1
 counter = true
+default_cam = view_get_camera(0);

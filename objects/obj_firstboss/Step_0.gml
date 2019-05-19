@@ -50,14 +50,24 @@ if (instance_exists(obj_player))
 		draw_sprite(spr_qte_down, 0, nearest_player.x, nearest_player.y);
 		otjatia += 0.2;	
 	}
+	if nearest_player.boss_fight 
+	{
+		//view_enabled[0] = false
+		//view_visible[1] = true
+		//view_visible[0] = false
+		var xx = nearest_player.x + (x - nearest_player.x) / 2
+		var yy = nearest_player.y + (y - nearest_player.y) / 2
+		var cam = camera_create_view(xx - 237.5, yy - 175, 475, 250, 0);
+		view_set_camera(0, cam);
+		//view_enabled[1] = true
+		
+	}
+	else
+	{
+		view_set_camera(0, default_cam);
+		//view_visible[0] = true
+		//view_visible[1] = false
+	}
 	
 	
 }
-
-
-
-//if (self.sprite_index==spr_boss_otjimania)&&(timer<=0){
-//	timer=2;
-//	otjatia++;
-//	}
-//timer--;

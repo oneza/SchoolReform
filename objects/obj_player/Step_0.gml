@@ -215,7 +215,10 @@ if (in_combat)
 		damage_display.damage_dealer = 0
 		damage_display.damage_value = damage
 		damage_display.crit = crit
+		nearest_enemy.sprite_index = spr_enemy_weak_pain
+		nearest_enemy.can_change_sprite = false
 	}
+
 	if stage == 0
 	{
 		self.sprite_index = spr_player_fightpose
@@ -309,6 +312,12 @@ if (in_combat)
 else
 {
 	scr_destroy_all_qte()
+}
+
+if alarm[8] == 0.1 * room_speed
+{
+	nearest_enemy.sprite_index = spr_enemy_weak_stand
+	nearest_enemy.can_change_sprite = true
 }
 	
 if(player_hp <= 0){

@@ -8,7 +8,8 @@
         "e90d4fb2-d186-4f94-9625-08d33890673e",
         "6f9f8599-1c23-43d9-8ff7-4014d2f889cb",
         "1d4d2199-defd-4128-8747-9a8e3c5da5be",
-        "360698d1-46cf-46c6-a1ab-3c5b9a172e86"
+        "360698d1-46cf-46c6-a1ab-3c5b9a172e86",
+        "15112e92-9cf3-4d32-b7eb-e95d5e2d0b3e"
     ],
     "filterType": "GMObject",
     "folderName": "graffity",

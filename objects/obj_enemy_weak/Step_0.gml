@@ -114,7 +114,7 @@ y += vsp;
 
 
 //СМЕНА СПРАЙТОВ НА СКОРУЮ НОГУ
-if state !=4
+if state !=4 && can_change_sprite
 {
 	//ПОВОРОТ СПРАЙТА
 	if (hsp==0)
@@ -128,7 +128,7 @@ if state !=4
 	}
 	if (state != 3) 
 	{
-		self.sprite_index=spr_enemy_weak_run
+		self.sprite_index = spr_enemy_weak_run
 	}
 	else
 	{
@@ -154,9 +154,12 @@ if state !=4
 			damage_display.damage_dealer = 1
 			damage_display.damage_value = damage
 			damage_display.crit = crit
+			obj_player.sprite_index = spr_player_pain
 		}
-	
-	
+		if (alarm_for_attack == room_speed * 0.10)
+		{
+			obj_player.sprite_index = spr_player_fightpose
+		}
 
 		if (alarm_for_attack == 0)
 		{
