@@ -1,3 +1,4 @@
+
 if(showInv == true){
 	for(i = 0; i < maxItems; i++){
 		if(global.inventory[i] == 5)
@@ -12,7 +13,7 @@ if(showInv == true){
 	}
 
 }
-
+if (room=rm_firstboss){locked=0;}
 if keyboard_check(ord("E")) && !locked
 {
 	global.player_hp = obj_player.player_hp

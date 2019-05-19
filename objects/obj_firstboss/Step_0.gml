@@ -1,10 +1,21 @@
 //key_enter = keyboard_check_pressed(vk_enter);
+if (self.sprite_index==spr_firstboss_hit){
+		if (bosshit>0) {bosshit--}
+		else{
+		var nearest_player = instance_nearest(x, y, obj_player)
+		nearest_player.player_hp -= 50;
+		nearest_player.speed_h = -100;
+		nearest_player.speed_v = -50;
+		obj_player.sprite_index=spr_player_pain;
+		self.sprite_index=spr_firstboss;
+	}
+}
 key_down = keyboard_check_pressed(vk_down);
 
 if (instance_exists(obj_player)) 
 { 
 	var nearest_player = instance_nearest(x, y, obj_player)
-	if (point_distance(x, y, nearest_player.x, nearest_player.y) < 150) && !nearest_player.is_challenging && !defeated && !won
+	if (point_distance(x, y, nearest_player.x, nearest_player.y) < 150) && !nearest_player.is_challenging && !defeated && !won && (self.sprite_index==spr_firstboss)
 	{
 		if counter
 		{

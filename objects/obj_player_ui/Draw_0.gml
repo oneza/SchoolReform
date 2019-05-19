@@ -20,6 +20,9 @@ if(instance_exists(obj_player))
 //		instance_destroy();
 //	}
 //}
+if(room=rm_firstboss){showInv = 0;}
+//******
+
 if(showInv == true && room != rm_death&& room != rm_start){
 	var x1, x2, y1, y2;
 	

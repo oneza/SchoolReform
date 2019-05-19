@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "1f1efbb8-0073-451c-83c8-74e050952de8",
+            "Value": {
+                "id": "787bc159-e9e8-410d-ae70-b6ea0d24434e",
+                "resourcePath": "sounds\\snd_gymambient1\\snd_gymambient1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1f2b8397-97b3-449c-8321-91b087cb52b6",
             "Value": {
                 "id": "53fa86e7-6eb7-4055-a4c8-5319cac9d2cd",
@@ -1463,14 +1471,6 @@
             }
         },
         {
-            "Key": "c9f62ea6-d64c-47d2-ba27-ae5978ef4663",
-            "Value": {
-                "id": "edd6e621-5b2f-4c55-bf48-6a35b6984349",
-                "resourcePath": "objects\\obj_player_test\\obj_player_test.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "ca701e33-7b2f-4bcd-aa9c-af274b1867c8",
             "Value": {
                 "id": "6d96ade3-cfcf-4f63-bac0-764dcbc05d9a",
@@ -1812,14 +1812,6 @@
                 "id": "89dc65d6-15a7-4019-9ad9-05f0726bffca",
                 "resourcePath": "rooms\\rm_firstboss\\rm_firstboss.yy",
                 "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "ec9bbf0d-8cd8-4128-ac85-195c8a4a361b",
-            "Value": {
-                "id": "b31e8668-5562-4b39-86e8-a9f64898e520",
-                "resourcePath": "objects\\obj_player_bagged\\obj_player_bagged.yy",
-                "resourceType": "GMObject"
             }
         },
         {

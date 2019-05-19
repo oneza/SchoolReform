@@ -15,9 +15,10 @@ draw_set_halign(fa_middle);
 draw_set_valign(fa_top);
 if defeated
 {
-	draw_text(x, y - 200, string("YOU WON "))
+	draw_text(x, y - 150, string("YOU WON "))
+	self.sprite_index=spr_beated;
 }
 if won
 {
-	draw_text(x, y - 200, string("YOU LOOSE "))
+	draw_text(x, y - 150, string("YOU LOOSE "))
 }

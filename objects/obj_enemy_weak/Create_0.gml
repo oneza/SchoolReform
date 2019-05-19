@@ -21,7 +21,7 @@ randomize();
 patrol_random = floor(random_range(0, 1 + 1));
 patrol_direction = -1 + 2 * patrol_random
 drop = 0
-
+punched = 0;
 while place_meeting(round(x), round(y), obj_player)
 {
 	obj_player.x -= 35

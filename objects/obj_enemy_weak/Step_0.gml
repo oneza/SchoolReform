@@ -124,7 +124,9 @@ if state !=4
 	else
 	{
 		//self.sprite_index=spr_enemy_weak_run
+		if !(punched){
 		self.image_xscale=sign(hsp);
+		}
 	}
 	if (state != 3) 
 	{
@@ -150,6 +152,7 @@ if state !=4
 
 			//obj_player.speed_h += 10 * dir
 			obj_player.player_hp -= damage
+			obj_player.sprite_index=spr_player_pain;
 			var damage_display = instance_create_layer(obj_player.x, obj_player.y - 20, "UI", obj_damage_text)
 			damage_display.damage_dealer = 1
 			damage_display.damage_value = damage
@@ -169,10 +172,14 @@ if state !=4
 	}
 }
 
-
+if punched{
+	self.sprite_index=spr_enemy_weak_pain;
+	punched--;
+}
 
 if(en_health <= 0)
 {
+	self.sprite_index=spr_enemy_weak_pain;
 	obj_player.alarm[9] = -1
 	self.image_xscale=sign(dir);
 	state = 4

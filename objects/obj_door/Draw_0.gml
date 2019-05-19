@@ -17,7 +17,7 @@ if instance_exists(obj_player)
 			draw_set_color(c_white);
 			draw_roundrect(x + dir * 30, y + 5, x + dir * 150, y + 35, false);
 			draw_set_color(c_black);
-			draw_text(x + dir * 88 , y + 20, "GDE KLU4");
+			draw_text(x + dir * 88 , y + 20, "NO KEY");
 		}
 		else
 		{

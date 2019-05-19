@@ -10,14 +10,15 @@ switch (obj_firstboss.try)
 			case 0:
 				dir = sign(obj_player.x - obj_firstboss.x);
 				draw_set_color(c_white);
-				draw_roundrect(boss_x - dir * 25 , obj_player.y-30, boss_x - dir * 150, obj_player.y,false);
+				draw_roundrect(boss_x - dir * 25 , obj_player.y-70, boss_x - dir * 150, obj_player.y-40,false);
 				draw_set_color(c_black);
 				//draw_roundrect(670, 450, 730, 795, true);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_top);
 				draw_text_ext_transformed(boss_x - dir * 30, 
-										  obj_player.y-28, 
-										  "Hey buddy, I think you've got the wrong door, the leather club's two blocks down.", 
+										  //obj_player.y-28, 
+										  obj_player.y-68,
+										  "Hey buddy, I think you've got the wrong door, the chess club's two blocks down.", 
 										  15,
 										  200,
 										  0.6,
@@ -39,7 +40,7 @@ switch (obj_firstboss.try)
 				draw_set_valign(fa_top);
 								draw_text_ext_transformed(obj_player.x + dir * 145, 
 										  obj_player.y-28, 
-										  "Fuck you, leather man.", 
+										  "Fuck you, leather man. I'm here to beat yor ass.", 
 										  15,
 										  200,
 										  0.6,
@@ -54,14 +55,14 @@ switch (obj_firstboss.try)
 	
 			case 2:
 				dir = sign(obj_player.x - obj_firstboss.x);
-				draw_roundrect(boss_x - dir * 25 , obj_player.y-30, boss_x - dir * 150, obj_player.y,false);
+				draw_roundrect(boss_x - dir * 25 , obj_player.y-70, boss_x - dir * 150, obj_player.y-40,false);
 				draw_set_color(c_black);
 				//draw_roundrect(670, 450, 730, 795, true);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_top);
 				draw_text_ext_transformed(boss_x - dir * 30, 
-										  obj_player.y-28, 
-										  "No fuck you.", 
+										  obj_player.y-68, 
+										  "No fuck you. We'll deal it like a mans!", 
 										  15,
 										  200,
 										  0.6,

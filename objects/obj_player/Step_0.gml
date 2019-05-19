@@ -211,10 +211,12 @@ if (in_combat)
 		var dir = sign(nearest_enemy.x - x);
 		nearest_enemy.hsp += dir * 10
 		nearest_enemy.en_health -= damage
+		nearest_enemy.sprite_index=spr_enemy_weak_pain;
+		nearest_enemy.punched=3;
 		var damage_display = instance_create_layer(nearest_enemy.x, nearest_enemy.y - 20, "UI", obj_damage_text)
 		damage_display.damage_dealer = 0
 		damage_display.damage_value = damage
-		damage_display.crit = crit
+		damage_display.crit = crit;
 	}
 	if stage == 0
 	{
