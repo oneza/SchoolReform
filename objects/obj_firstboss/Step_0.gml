@@ -26,7 +26,7 @@ if (instance_exists(obj_player))
 		nearest_player.otjatia = 0
 		nearest_player.sprite_index = spr_player_stand
 		nearest_player.boss_fight = true
-		sprite_index = spr_firstboss
+		//sprite_index = spr_firstboss
 		if !dialog_spawned
 		{
 			dialog_spawned	= true
